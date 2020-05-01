@@ -1,8 +1,7 @@
 <html>
 <style>
 p.ex1 {
-  border: 10px solid red; 
-  padding-right: 300px;
+  padding-right: 50px;
 }
 </style>
 <title>Corona Virus</title>
