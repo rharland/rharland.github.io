@@ -19,7 +19,18 @@ Statistik ein Fremdwort.<br>
 </td>
 </table>
 <hr>
-<h3>Flattening the curve</h3>
+<ul>
+  <li><a href="#flatten">Flattening the curve</a></li>
+  <li><a href="#germany">Aktuelle Zahlen f&uuml;r Deutschland</a></li>
+  <li><a href="#europe">Aktuelle Zahlen f&uuml;r Europa</a></li>
+  <li><a href="#world">Aktuelle Zahlen f&uuml;r andere L&auml;nder</a></li>
+  <li><a href="#derzeit">Derzeit Infizierte</a></li>
+  <li><a href="#neu">Neu-Infektionen</a></li>
+  <li><a href="#basis">Basisreproduktionszahl R<sub>0</sub></a></li>
+  <li><a href="#apocalypse">Apocalypse Day</a></li>
+  </ul>
+<hr>
+<h3><a id="flatten">Flattening the curve</a></h3>
 <center>
 <img width="90%" src="plots/plot.gif">
 </center>
@@ -33,11 +44,11 @@ Zeitpunkt, an dem alle in Deutschland lebenden Menschen infiziert sind
 <p>
 Der Schnittpunkt wandert tendenziell in die Zukunft, was bedeutet, dass
 die exponentielle Infizierungsrate abnimmt. Diese Verschiebung
-ist im Plot <a href="#verschiebung">weiter unten</a> gezeigt.
+ist im Plot <a href="#apocalypse">weiter unten</a> gezeigt.
 </td>
 </table>
 <hr>
-<h3>Deutschland</h3>
+<h3><a id="germany">Deutschland</a></h3>
 Hier nochmal die aktuellen Zahlen in einer etwas anderen Auftragung. Links:
 lineare Skala, rechts: logarithmisch.
 Der exponentielle Fit bezieht nur die letzten 10 Tage mit ein.
@@ -48,7 +59,7 @@ Der exponentielle Fit bezieht nur die letzten 10 Tage mit ein.
 
 <hr>
 
-<h3>Europa</h3>
+<h3><a id="europe">Europa</a></h3>
 
 Die selben Plots f&uuml;r Europa.
 <p>
@@ -57,7 +68,7 @@ Die selben Plots f&uuml;r Europa.
 </p>
 
 <hr>
-<h3>Welt</h3>
+<h3><a id="world">Welt</a></h3>
 
 Die selben Plots f&uuml;r andere L&auml;nder.
 <p>
@@ -67,7 +78,7 @@ Die selben Plots f&uuml;r andere L&auml;nder.
 
 <hr>
 
-<h3>Momentan Infizierte</h3>
+<h3><a id="derzeit">Derzeit Infizierte</a></h3>
 Nun die Zahl der momentan Infizierten, also die Differenz aus Infizierten
 und wieder Genesenen.
 <p>
@@ -81,8 +92,9 @@ und wieder Genesenen.
 
 <hr>
 
-<h3>Neu-Erkrankungen</h3>
-Als n&auml;chstes die Zahl der Neu-Erkrankungen pro Tag in Deutschland und Europa,
+<h3><a id="neu">Neu-Infektionen</h3>
+Als n&auml;chstes die Zahl der Neu-Infektionen pro Tag in Deutschland
+und Europa,
 gemittelt &uuml;ber 10-Tage-Intervalle:
 <p>
 <table>
@@ -95,7 +107,7 @@ gemittelt &uuml;ber 10-Tage-Intervalle:
 
 <hr>
 
-<h3>Basisreproduktionszahl</h3>
+<h3><a id="basis">Basisreproduktionszahl</a></h3>
 Jetzt noch die Basisreproduktionszahl, berechnet 
 <a href="https://de.wikipedia.org/wiki/SIR-Modell">gem&auml;&szlig;</a>
 R<sub>0</sub> = n &Delta;I/&Delta;R, wobei &Delta;I die Zahl der im Zeitintervall
@@ -114,7 +126,7 @@ klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall:
 
 <hr>
 
-<a id="verschiebung"><h3>Apocalypse Day</h3></a>
+<a id="apocalypse"><h3>Apocalypse Day</h3></a>
 Die y-Achse zeigt den voraussichtlichen Tag, 
 an dem alle Deutschen infiziert sind, berechnet am Tag x.
 Die Steigung <i>a</i> gibt an, wie schnell sich der Tag entfernt/n&auml;hert, 
