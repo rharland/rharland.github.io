@@ -18,7 +18,8 @@ Statistik ein Fremdwort.<br>
 <font size="-1">J. Schnelzer, 2020</font>
 </td>
 </table>
-Stand: 10. Mai 2020
+Stand: 10. Mai 2020<br>
+<font color="red">NEU:</font> <a href="#basis">R-Wert gem&auml;&szlig; RKI</a>, und entsprechender Kommentar.
 <hr>
 <ul>
   <li><a href="#flatten">Flattening the curve</a></li>
@@ -126,17 +127,17 @@ klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall:
 </p>
 Blau gestrichelt gezeichnet ist der R-Wert, wie er nach meiner
 Interpretation
-vom <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">RKI
-gesch&auml;tzt</a>. Demgem&auml;&szlig; ist er sich am Tag n als
-einfaches Verh&auml;ltnis der Neu-Infektionen am Tag n und am Tag n-4,
-wobei diese Werte &uuml;ber 3 Tage gemittelt sind, also
-(I(n)-I(n-4))/(I(n-4)-I(n-8)).
+<a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">vom
+RKI gesch&auml;tzt</a> wird. Demgem&auml;&szlig; ergibt er sich am Tag n
+als einfaches Verh&auml;ltnis der Neu-Infektionen am Tag n und am Tag
+n-4, wobei diese Werte jeweils &uuml;ber 3 Tage gemittelt sind. Das
+l&auml;sst sich schreiben als (I(n)-I(n-4))/(I(n-4)-I(n-8)), mit I(n) der Infektionszahl am Tag n.
 <p>
 Man beachte, dass in diese Berechnung die nicht genau bekannte
 Regenerationszeit eingeht, die auf 4 Tage gesch&auml;tzt wird. Dass obige
 Zahlen nicht genau mit denen des RKI &uuml;bereinstimmen liegt vermutlich daran, dass diese eine Wahrscheinlichkeitsverteilung f&uuml;r die Regenerationszeit verwenden, wodurch die Berechnung etwas komplizierter und der Verlauf vermutlich glatter wird.
 <p>
-  In meine Berechnung von R<sub>0</sub> geht keinerlei Sch&auml;tzung ein: sie beruht ganz allein auf Daten, sowie dem <a href="https://de.wikipedia.org/wiki/SIR-Modell">SIR-Modell</a> (mit geringf&uuml;gigen N&auml;herungen).
+  In meine Berechnung von R<sub>0</sub> (obige rote Kurve) geht keinerlei Sch&auml;tzung ein: sie beruht ganz allein auf Daten, sowie dem <a href="https://de.wikipedia.org/wiki/SIR-Modell">SIR-Modell</a> (mit geringf&uuml;gigen N&auml;herungen).
 <hr>
 
 <a id="apocalypse"><h3>Apocalypse Day</h3></a>
