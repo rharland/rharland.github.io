@@ -108,26 +108,36 @@ gemittelt &uuml;ber 10-Tage-Intervalle:
 
 <hr>
 
-<h3><a id="basis">Basisreproduktionszahl</a></h3> Jetzt noch die
-Basisreproduktionszahl, berechnet <a
-href="https://de.wikipedia.org/wiki/SIR-Modell">gem&auml;&szlig;</a>
-R<sub>0</sub> = n &Delta;I/&Delta;R, wobei &Delta;I die Zahl der im
-Zeitintervall &Delta;t neu infizierten Personen ist, und &Delta;R die Zahl
-der in &Delta;t neu genesenen.  Der Normierungsfaktor ist N/(N-I), mit
-N=Einwohner Deutschlands, und I=Zahl der Infizierten (Genesene mit
-eingerechnet).  Um statistische Schwankungen klein zu halten, mitteln wir
-wieder &uuml;ber ein 10-Tage-Intervall, d.h.  wie setzen &Delta;t=10.  <p>
-<table> <td align="center" colspan="2"> <img width="45%"
-src="plots/plot_germany-4.jpg"></td><tr> <td><img width="90%"
-src="plots/plot_europe-4.jpg"></td><td> <img width="90%"
-src="plots/plot_world-4.jpg"></td> </table> </p> Ebenso gezeigt (blau
-gestrichelt) ist der vom <a href="https://www.rki.de">RKI</a>
-gesch&auml;tzte R-Wert.  <a
-href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">Soweit
-ich verstehe</a> wird er als einfaches Verh&auml;ltnis der Neu-Infektionen
-am Tag n und am Tag n-4 berechnet, wobei diese Werte &uuml;ber 3 Tage
-gemittelt sind. Hier berechne ich das als
-(I(n)-I(n-3))/(I(n-4)-I(n-7)). <hr>
+<h3><a id="basis">Basisreproduktionszahl</a></h3>
+Jetzt noch die Basisreproduktionszahl, berechnet 
+<a href="https://de.wikipedia.org/wiki/SIR-Modell">gem&auml;&szlig;</a>
+R<sub>0</sub> = n &Delta;I/&Delta;R, wobei &Delta;I die Zahl der im Zeitintervall
+&Delta;t neu infizierten Personen ist, und &Delta;R die Zahl der in &Delta;t
+neu genesenen. Der Normierungsfaktor ist N/(N-I), mit N=Einwohner Deutschlands,
+und I=Zahl der Infizierten (Genesene mit eingerechnet). Um statistische Schwankungen
+klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall:
+<p>
+<table>
+<td align="center" colspan="2">
+<img width="45%" src="plots/plot_germany-4.jpg"></td><tr>
+<td><img width="90%" src="plots/plot_europe-4.jpg"></td><td>
+<img width="90%" src="plots/plot_world-4.jpg"></td>
+</table>
+</p>
+Blau gestrichelt gezeichnet ist der R-Wert, wie er nach meiner
+Interpretation
+vom <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">RKI
+gesch&auml;tzt</a>. Demgem&auml;&szlig; ist er sich am Tag n als
+einfaches Verh&auml;ltnis der Neu-Infektionen am Tag n und am Tag n-4,
+wobei diese Werte &uuml;ber 3 Tage gemittelt sind, also
+(I(n)-I(n-4))/(I(n-4)-I(n-8)).
+<p>
+Man beachte, dass in diese Berechnung die nicht genau bekannte
+Regenerationszeit eingeht, die auf 4 Tage gesch&auml;tzt wird. Dass obige
+Zahlen nicht genau mit denen des RKI &uuml;bereinstimmen liegt vermutlich daran, dass diese eine Wahrscheinlichkeitsverteilung f&uuml;r die Regenerationszeit verwenden, wodurch die Berechnung etwas komplizierter und der Verlauf vermutlich glatter wird.
+<p>
+  In meine Berechnung von R<sub>0</sub> geht keinerlei Sch&auml;tzung ein: sie beruht ganz allein auf Daten, sowie dem <a href="https://de.wikipedia.org/wiki/SIR-Modell">SIR-Modell</a> (mit geringf&uuml;gigen N&auml;herungen).
+<hr>
 
 <a id="apocalypse"><h3>Apocalypse Day</h3></a>
 Die y-Achse zeigt den voraussichtlichen Tag, 
