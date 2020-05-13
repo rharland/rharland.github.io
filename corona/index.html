@@ -30,7 +30,7 @@ Zahlen hat das <a href="https://www.rki.de">RKI</a>.
   <li><a href="#world">Aktuelle Zahlen f&uuml;r andere L&auml;nder</a></li>
   <li><a href="#derzeit">Derzeit Infizierte</a></li>
   <li><a href="#neu">Neu-Infektionen</a></li>
-  <li><a href="#basis">Basisreproduktionszahl R<sub>0</sub></a></li>
+  <li><a href="#repro">Reproduktionszahl R</a></li>
   <li><a href="#apocalypse">Apocalypse Day</a></li>
   </ul>
 <hr>
@@ -111,13 +111,16 @@ gemittelt &uuml;ber 10-Tage-Intervalle:
 
 <hr>
 
-<h3><a id="basis">Basisreproduktionszahl</a></h3>
-Jetzt noch die Basisreproduktionszahl, berechnet 
+<h3><a id="repro">Reproduktionszahl</a></h3>
+Jetzt noch die Reproduktionszahl, berechnet 
 <a href="https://de.wikipedia.org/wiki/SIR-Modell">gem&auml;&szlig;</a>
-R<sub>0</sub> = n &Delta;I/&Delta;R, wobei &Delta;I die Zahl der im Zeitintervall
-&Delta;t neu infizierten Personen ist, und &Delta;R die Zahl der in &Delta;t
-neu genesenen.<sup><a href="#r0expl">(1)</a></sup> Der Normierungsfaktor ist N/(N-I), mit N=Einwohner Deutschlands,
-und I=Zahl der Infizierten (Genesene mit eingerechnet). Um statistische Schwankungen
+R<sub>obl</sub>
+= &Delta;I/&Delta;G, wobei &Delta;I die Zahl der im Zeitintervall
+&Delta;t neu infizierten Personen ist, und &Delta;G die Zahl der in &Delta;t
+neu genesenen.<sup><a href="#rexpl">(1)</a></sup>
+<!-- Der Normierungsfaktor ist N/(N-I), mit N=Einwohner Deutschlands,
+     und I=Zahl der Infizierten (Genesene mit eingerechnet).-->
+Um statistische Schwankungen
 klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall:
 <p>
 <table>
@@ -130,7 +133,7 @@ klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall:
 Blau gestrichelt gezeichnet ist der R-Wert, wie er nach meiner
 Interpretation
 <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">vom
-RKI gesch&auml;tzt</a> wird.<sup><a href="#r0rkierkl">(2)</a></sup> 
+RKI gesch&auml;tzt</a> wird.<sup><a href="#rrkierkl">(2)</a></sup> 
 Demgem&auml;&szlig; ergibt er sich am Tag n
 als einfaches Verh&auml;ltnis der Neu-Infektionen am Tag n und am Tag
 n-4, wobei diese Werte jeweils &uuml;ber 3 Tage gemittelt sind. Das
@@ -144,7 +147,7 @@ Wahrscheinlichkeitsverteilung f&uuml;r die Regenerationszeit verwendet,
 wodurch die Berechnung etwas komplizierter und der Verlauf vermutlich
 glatter wird.
 <p>
-  In meine Berechnung von R<sub>0</sub> (obige rote Kurve) geht keinerlei Sch&auml;tzung ein: sie beruht ganz allein auf Daten, sowie dem <a href="https://de.wikipedia.org/wiki/SIR-Modell">SIR-Modell</a> (mit geringf&uuml;gigen N&auml;herungen).
+  In meine Berechnung von R (obige rote Kurve, als R<sub>obl</sub> bezeichnet) geht keinerlei Sch&auml;tzung ein: sie beruht ganz allein auf Daten, sowie dem <a href="https://de.wikipedia.org/wiki/SIR-Modell">SIR-Modell</a> (mit geringf&uuml;gigen N&auml;herungen).
   <hr>
 
 <a id="apocalypse"><h3>Apocalypse Day</h3></a> Die y-Achse zeigt den
@@ -158,30 +161,28 @@ src="plots/dum3.png"> </p> <hr>
 <h3>Erl&auml;uterungen</h3> 
 <dl>
 <dt><a
-id="r0expl">(1)</a> Wie kann man die Formel R<sub>0</sub>=n&Delta;I/&Delta;R
+id="rexpl">(1)</a> Wie kann man die Formel R=&Delta;I/&Delta;G
 verstehen?</dt>
 <dd>
-<p>R<sub>0</sub> ist definiert als die Zahl an Personen, 
+<p>R ist definiert als die Zahl an Personen, 
 die jeder Infizierte im Laufe seiner Krankheit im Mittel infiziert. 
 Stellen wir uns vor, die Krankheit dauert &Delta;t=4 Tage; man ist also 4
 Tage lang ansteckend, und danach nicht mehr krank (sagen wir: genesen).  
 Am Tag 0 des Ausbruchs
-seien N Personen infiziert.  Dann sind nach 4 Tagen N*R<sub>0</sub> Personen neu
+seien N Personen infiziert.  Dann sind nach 4 Tagen N*R Personen neu
 infiziert, und N Personen genesen (diejenigen, die in den ersten 4
 Tagen krank waren).  Das Verh&auml;ltnis aus beiden
-Zahlen ist (N*R<sub>0</sub>)/N = R<sub>0</sub>.  Am Tag 8 sind
-N*R<sub>0</sub>*R<sub>0</sub> Personen neu infiziert, und N*R<sub>0</sub>
-neu genesen.
+Zahlen ist (N*R)/N = R.  Am Tag 8 sind
+N*R*R Personen neu infiziert, und N*R neu genesen.
 Das Verh&auml;ltnis aus beiden Zahlen ist also
-(N*R<sub>0</sub>*R<sub>0</sub>)/(N*R<sub>0</sub>)=R<sub>0</sub>.  Am Tag 12
+(N*R*R)/(N*R)=R.  Am Tag 12
 ergibt sich
-(N*R<sub>0</sub>*R<sub>0</sub>*R<sub>0</sub>)/(N*R<sub>0</sub>*R<sub>0</sub>)
-=R<sub>0</sub>, usw.
+(N*R*R*R)/(N*R*R)=R, usw.
 </p>
 <p>
 Das Verh&auml;ltnis aus in der Zeit &Delta;t Neu-Infizierten &Delta;I 
-zu Neu-Genesenen &Delta;R ist also immer
-einfach gleich R<sub>0</sub>. Interessant ist nun, dass man hier &Delta;t
+zu Neu-Genesenen &Delta;G ist also immer
+einfach gleich R. Interessant ist nun, dass man hier &Delta;t
 gar nicht zu wissen braucht. Angenommen, &Delta;t w&auml;re nur halb so
 gro&szlig; wie angenommen. Dann h&auml;tte man zwar 
 die Zahl der Neu-Infizierten 
@@ -189,24 +190,26 @@ f&auml;lschlicherweise um einen Faktor 2 zu gro&szlig; abgesch&auml;tzt,
 aber eben auch die Zahl der Neu-Genesenen. Das Verh&auml;ltnis bleibt davon
 unber&uuml;hrt.
 </p>
+<!--
 <p>
-Der Normierungsfaktor n in der <a href="#basis">Formel</a>
-R<sub>0</sub> = n &Delta;I/&Delta;R ber&uuml;cksichtigt, dass irgendwann
+Der Normierungsfaktor n in der <a href="#repro">Formel</a>
+R<sub>0</sub> = n &Delta;I/&Delta;G ber&uuml;cksichtigt, dass irgendwann
 so viele Leute immun sind, dass nicht mehr "gen&uuml;gend" Personen angesteckt
 werden k&ouml;nnen. Momentan (Mai 2020) spielt das keine Rolle, und es
 gilt ziemlich genau n=1.
 </p>
+-->
 </dd>
-<dt><a id="r0rkierkl">(2)</a> Was macht das RKI?</dt>
+<dt><a id="rrkierkl">(2)</a> Was macht das RKI?</dt>
 <dd>
 <p>
 Nehmen wir obiges Beispiel. Wir starten wieder mit N Infizierten am Tag 0.
-Nach 4 Tagen gibt es N*R<sub>0</sub> Neu-Infizierte, nach 8 Tagen
-N*R<sub>0</sub>*R<sub>0</sub>, usw. Wenn man also das Verh&auml;ltnis aus
+Nach 4 Tagen gibt es N*R Neu-Infizierte, nach 8 Tagen
+N*R*R, usw. Wenn man also das Verh&auml;ltnis aus
 Neu-Infizierten am Tag n und am Tag n+4 nimmt, kriegt man auch
-R<sub>0</sub>. Aber: wenn man sich hier um einen Faktor zwei in der
+R. Aber: wenn man sich hier um einen Faktor zwei in der
 Regenerationszeit versch&auml;tzt, dann geht dieser Faktor direktemang in
-die R<sub>0</sub>-Berechnung ein. Also: welche Methode ist jetzt besser?
+die R-Berechnung ein. Also: welche Methode ist jetzt besser?
 </p>
 <p>Andererseits: In den Zahlen f&uuml;r die Neu-Genesenen steckt vermutlich
 auch eine gro&szlig;e Unsicherheit: wer meldet sich schon gesund? Unter
