@@ -23,6 +23,14 @@ Stand: 24. Mai 2020<br>
 in keiner Weise weiterverwendet werden. Die offiziellen
 Zahlen hat das <a href="https://www.rki.de">RKI</a>.
 <hr>
+<b>News:</b> Seit ein paar Tagen scheint die Zahl der Infektionen wieder
+exponentiell zu wachsen, allerdings mit sehr niedriger Verdopplungsrate (ca.
+1 Jahr). Das sieht man vor allem am <a
+href="#apocalypse">Apokalypsenplot</a>: der Tag, an dem (unter Annahme
+exponentiellen Wachstums) 82 Millionen Menschen infiziert sein werden, ist
+seit ein paar Tagen immer ungef&auml;hr der selbe. Bin mal gespannt, wann
+das RKI das auch merkt.
+<hr>
 <ul>
   <li><a href="#flatten">Flattening the curve</a></li>
   <li><a href="#germany">Aktuelle Zahlen f&uuml;r Deutschland</a></li>
@@ -151,12 +159,17 @@ glatter wird.
   <hr>
 
 <a id="apocalypse"><h3>Apocalypse Day</h3></a> Die y-Achse zeigt den
-voraussichtlichen Tag, an dem alle Deutschen infiziert sind, berechnet am
-Tag x.  Die Steigung <i>a</i> gibt an, wie schnell sich der Tag
-entfernt/n&auml;hert, an dem alle Deutschen infiziert sind: pro Tag
-r&uuml;ckt dieser Tag um <i>a</i> Tage von uns weg.  Wenn also <i>a</i>&lt;1
-ist, r&uuml;ckt der Tag n&auml;her.  <p> <img width="50%"
-src="plots/dum3.png"> </p> <hr> 
+voraussichtlichen Tag, an dem alle Deutschen infiziert sind, berechnet
+am Tag x.  Die durchgezogene Linie ist ein linearer Fit durch die
+letzten 5 Tage. Die Steigung <i>a</i> dieses Fits gibt an, wie schnell
+sich der Tag entfernt/n&auml;hert, an dem alle Deutschen infiziert sind:
+pro Tag r&uuml;ckt dieser Tag um <i>a</i> Tage von uns weg.  Wenn
+also <i>a</i>&lt;1 ist, r&uuml;ckt der Tag
+n&auml;her.
+Man beachte den seltsamen Knick am 19.5.2020: der Grund daf&uuml;r ist
+mir nicht klar.
+<p> <img width="50%" src="plots/dum3.png"> </p>
+<hr>
 
 <h3>Erl&auml;uterungen</h3> 
 <dl>
