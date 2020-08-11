@@ -30,7 +30,7 @@ Statistik ein Fremdwort.<br>
 </td>
 </table>
 <hr>
-Stand: 10. August 2020<br>
+Stand: 11. August 2020<br>
 <i>Disclaimer:</i> Alle Zahlen sind h&ouml;chst inoffiziell und d&uuml;rfen
 in keiner Weise weiterverwendet werden. Die offiziellen
 Zahlen hat das <a href="https://www.rki.de">RKI</a>.
@@ -50,6 +50,16 @@ Zahlen hat das <a href="https://www.rki.de">RKI</a>.
 <!-- <dt><i>21. Juni 2020:</i></dt>
 <dd> Hey Robl, wo ist die sch&ouml;ne
   <a href="alt">alte Webseite</a>? -->
+<dt><i>10. August 2020:</i><dt>
+<dd>
+  <ul>
+    <li>
+      An manchen Stellen sind jetzt die logarithmischen Plots ersetzt
+      durch Plots pro 1000 Einwohner. Auch hier liegen USA und Brasilien
+      ganz weit vorn.
+    </li>
+  </ul>
+</dd>
 <dt><i>09. Juli 2020:</i><dt>
 <dd>
   <ul>
@@ -110,12 +120,12 @@ ist im Plot <a href="#apocalypse">weiter unten</a> gezeigt.
 </table>
 <hr>
 <h3><a id="germany">Deutschland</a></h3>
-Hier nochmal die aktuellen Zahlen in einer etwas anderen Auftragung. Links:
-lineare Skala, rechts: logarithmisch.
+Hier nochmal die aktuellen Zahlen in linearer Auftragung.
+Links: absolute Zahlen; rechts: pro 1000 Einwohner.
 Der exponentielle Fit bezieht nur die letzten 10 Tage mit ein.
 <p>
 <img width="45%" src="plots/plot_germany-0.jpg">
-<img width="45%" src="plots/plot_germany-1.jpg">
+<img width="45%" src="plots/plotnorm_germany.jpg">
 </p>
 
 <hr>
@@ -125,7 +135,7 @@ Der exponentielle Fit bezieht nur die letzten 10 Tage mit ein.
 Die selben Plots f&uuml;r Europa.
 <p>
 <img width="45%" src="plots/plot_europe-0.jpg">
-<img width="45%" src="plots/plot_europe-1.jpg">
+<img width="45%" src="plots/plotnorm_europe.jpg">
 </p>
 
 <hr>
@@ -134,7 +144,7 @@ Die selben Plots f&uuml;r Europa.
 Die selben Plots f&uuml;r andere L&auml;nder.
 <p>
 <img width="45%" src="plots/plot_world-0.jpg">
-<img width="45%" src="plots/plot_world-1.jpg">
+<img width="45%" src="plots/plotnorm_world.jpg">
 </p>
 
 <hr>
@@ -156,17 +166,18 @@ und wieder Genesenen.
 <h3><a id="neu">Tagesanstieg</h3> Als n&auml;chstes die Zahl der
 Neu-Infektionen ("new infections") und die Zahl der neu
 nicht-mehr-Infizierten ("removed") pro Tag in Deutschland, Europa und
-anderen L&auml;nder ("world"), gemittelt &uuml;ber 10-Tage-Intervalle:
+anderen L&auml;nder ("world"), gemittelt &uuml;ber 10-Tage-Intervalle.
+Rechts: aufgeschl&uuml;sselt nach L&auml;ndern, pro 1000 Einwohner.
 <p>
 <table>
 <td><img width="90%" src="plots/plot_germany-3.jpg"></td>
-<td><img width="90%" src="plots/plotrat_germany-0.jpg"></td>
+<td><img width="90%" src="plots/plotratnorm_germany.jpg"></td>
 <tr>
 <td><img width="90%" src="plots/plot_europe-3.jpg"></td>
-<td><img width="90%" src="plots/plotrat_europe-0.jpg"></td>
+<td><img width="90%" src="plots/plotratnorm_europe.jpg"></td>
 <tr>
 <td><img width="90%" src="plots/plot_world-3.jpg"></td>
-<td><img width="90%" src="plots/plotrat_world-0.jpg"></td>
+<td><img width="90%" src="plots/plotratnorm_world.jpg"></td>
 <tr>
 </table>
 </p>
