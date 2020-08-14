@@ -12,6 +12,9 @@ h2 {
   font-family: verdana;
   font-size: 14px;
 }
+img.xx:hover {
+  transform: scale(1.5);
+}
 img.zoomr {
 height: 300px; /* [1.1] Set it as per your need */
 overflow: hidden; /* [1.2] Hide the overflowing of child elements */
@@ -20,15 +23,6 @@ transition: transform .5s ease-in-out;
 img.zoomr:hover {
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 transform: scale(1.7) translateX(30%);
-}
-img.zoom {
-height: 300px; /* [1.1] Set it as per your need */
-overflow: hidden; /* [1.2] Hide the overflowing of child elements */
-transition: transform .5s ease-in-out;
-}
-img.zoom:hover {
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-transform: scale(1.7) translateX(0%);
 }
 img.zooml {
 height: 300px; /* [1.1] Set it as per your need */
@@ -143,8 +137,8 @@ Der exponentielle Fit bezieht nur die letzten 10 Tage mit ein.
 
 Die selben Plots f&uuml;r Europa.
 <p>
-<img class="zoomr"  width="45%" src="plots/plot_europe-0.jpg">
-<img class="zooml"  width="45%" src="plots/plotnorm_europe.jpg">
+<img width="45%" src="plots/plot_europe-0.jpg">
+<img width="45%" src="plots/plotnorm_europe.jpg">
 </p>
 
 <hr>
@@ -152,8 +146,8 @@ Die selben Plots f&uuml;r Europa.
 
 Die selben Plots f&uuml;r andere L&auml;nder.
 <p>
-<img class="zoomr"  width="45%" src="plots/plot_world-0.jpg">
-<img class="zooml"  width="45%" src="plots/plotnorm_world.jpg">
+<img width="45%" src="plots/plot_world-0.jpg">
+<img width="45%" src="plots/plotnorm_world.jpg">
 </p>
 
 <hr>
@@ -164,9 +158,9 @@ und wieder Genesenen.
 <p>
 <table>
 <td align="center" colspan="2">
-<img class="zoom" width="45%" src="plots/plot_germany-2.jpg"></td><tr>
-<td><img class="zoomr" width="90%" src="plots/plot_europe-2.jpg"></td><td>
-<img class="zooml" width="90%" src="plots/plot_world-2.jpg"></td>
+<img width="45%" src="plots/plot_germany-2.jpg"></td><tr>
+<td><img width="90%" src="plots/plot_europe-2.jpg"></td><td>
+<img width="90%" src="plots/plot_world-2.jpg"></td>
 </table>
 </p>
 
@@ -179,14 +173,14 @@ anderen L&auml;nder ("world"), gemittelt &uuml;ber 10-Tage-Intervalle.
 Rechts: aufgeschl&uuml;sselt nach L&auml;ndern, pro 1000 Einwohner.
 <p>
 <table>
-<td><img class="zoomr"  width="90%" src="plots/plot_germany-3.jpg"></td>
-<td><img class="zooml"  width="90%" src="plots/plotratnorm_germany.jpg"></td>
+<td><img width="90%" src="plots/plot_germany-3.jpg"></td>
+<td><img width="90%" src="plots/plotratnorm_germany.jpg"></td>
 <tr>
-<td><img class="zoomr"  width="90%" src="plots/plot_europe-3.jpg"></td>
-<td><img class="zooml"  width="90%" src="plots/plotratnorm_europe.jpg"></td>
+<td><img width="90%" src="plots/plot_europe-3.jpg"></td>
+<td><img width="90%" src="plots/plotratnorm_europe.jpg"></td>
 <tr>
-<td><img class="zoomr"  width="90%" src="plots/plot_world-3.jpg"></td>
-<td><img class="zooml"  width="90%" src="plots/plotratnorm_world.jpg"></td>
+<td><img width="90%" src="plots/plot_world-3.jpg"></td>
+<td><img width="90%" src="plots/plotratnorm_world.jpg"></td>
 <tr>
 </table>
 </p>
@@ -207,9 +201,9 @@ klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall:
 <p>
 <table>
 <td align="center" colspan="2">
-<img class="zoom" width="45%" src="plots/plot_germany-4.jpg"></td><tr>
-<td><img class="zoomr"  width="90%" src="plots/plot_europe-4.jpg"></td><td>
-    <img class="zooml"  width="90%" src="plots/plot_world-4.jpg"></td>
+<img width="45%" src="plots/plot_germany-4.jpg"></td><tr>
+<td><img width="90%" src="plots/plot_europe-4.jpg"></td><td>
+<img width="90%" src="plots/plot_world-4.jpg"></td>
 </table>
 </p>
 Blau gestrichelt gezeichnet ist der R-Wert, wie er nach meiner
@@ -243,9 +237,9 @@ glatter wird.
   <p>
 <table>
 <td align="center" colspan="2">
-<img class="zoom" width="45%" src="plots/plot_germany-5.jpg"></td><tr>
-<td><img class="zoomr"  width="90%" src="plots/plot_europe-5.jpg"></td><td>
-    <img class="zooml"  width="90%" src="plots/plot_world-5.jpg"></td>
+<img width="45%" src="plots/plot_germany-5.jpg"></td><tr>
+<td><img width="90%" src="plots/plot_europe-5.jpg"></td><td>
+<img width="90%" src="plots/plot_world-5.jpg"></td>
 </table>
 </p>
 
@@ -259,7 +253,7 @@ also <i>a</i>&lt;1 ist, r&uuml;ckt der Tag
 n&auml;her.
 <p>
   <center>
-    <img class="zoom" width="50%" src="plots/dum3.png">
+    <img width="50%" src="plots/dum3.png">
   </center>
 </p>
 <hr>
