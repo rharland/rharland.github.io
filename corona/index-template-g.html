@@ -40,138 +40,26 @@ transform: scale(1.8) translateX(-20%);
 <hr>
 <title>Corona Virus</title>
 <body>
-<h2>Studien zum Corona-Virus</h2>
+<h2>Deutschland</h2>
 <hr>
 <table width="100%" border="0">
 <td valign="top">
 &copy; 2020 by R. Harlander<br>
 based on data taken from <a href="https://interaktiv.morgenpost.de/corona-virus-karte-infektionen-deutschland-weltweit/">this URL</a>
 </td>
-<td align="right">
-<i>In einer Welt, in der eine e-Funktion Erstaunen ausl&ouml;st,<br> ist
-Statistik ein Fremdwort.<br>
-<font size="-1">J. Schnelzer, 2020</font>
-</td>
 </table>
 <hr>
-Stand: 26. August 2020<br>
-<i>Disclaimer:</i> Alle Zahlen sind h&ouml;chst inoffiziell und d&uuml;rfen
-in keiner Weise weiterverwendet werden. Die offiziellen
-Zahlen hat das <a href="https://www.rki.de">RKI</a>.
-<p>
-  Warum dann diese Seite? Weil es viele tolle Plots gibt, 
-  die es sonst nirgends gibt: 
-  ein animiertes "<a href="#flatten">flatten the curve</a>"; 
-  einen verst&auml;ndlichen R-Wert (<a href="#repro">R<sub>obl</sub></a>), 
-  der keine Geheimnisse daraus macht, was in ihm steckt; 
-  einen einzigartigen <a href="#apocalypse">Apokalypsen-Plot</a>; 
-  eine neue Darstellung des <a href="#anstiegrel">relativen Anstiegs</a>. 
-  Braucht man mehr?
-  </p>
-<hr>
-<b>News:</b>
-<dl>
-<!-- <dt><i>21. Juni 2020:</i></dt>
-<dd> Hey Robl, wo ist die sch&ouml;ne
-  <a href="alt">alte Webseite</a>? -->
-<dt><i>14. August 2020:</i><dt>
-<dd>
-  <ul>
-    <li>
-    Plots unterm Mauszeiger werden gezoomt.
-    </li>
-  </ul>
-</dd>
-<dt><i>12. August 2020:</i><dt>
-<dd>
-  <ul>
-    <li>
-    Datums-Format an den Plots ge&auml;ndert.
-    </li>
-  </ul>
-</dd>
-<dt><i>10. August 2020:</i><dt>
-<dd>
-  <ul>
-    <li>
-      An manchen Stellen sind jetzt die logarithmischen Plots ersetzt
-      durch Plots pro 1000 Einwohner. Auch hier liegen USA und Brasilien
-      ganz weit vorn.
-    </li>
-  </ul>
-</dd>
-    </dl>
-<hr>
+<h3>Infizierte (kumulativ)</h3>
 <ul>
-  <li><a href="#flatten">Flattening the curve</a></li>
-  <li><a href="#germany">Aktuelle Zahlen f&uuml;r Deutschland</a></li>
-  <li><a href="#europe">Aktuelle Zahlen f&uuml;r Europa</a></li>
-  <li><a href="#world">Aktuelle Zahlen f&uuml;r andere L&auml;nder</a></li>
-  <li><a href="#derzeit">Derzeit Infizierte</a></li>
-  <li><a href="#neu">Tagesanstieg</a></li>
-  <li><a href="#repro">Reproduktionszahl R<sub>obl</sub></a></li>
-  <li><a href="#anstiegrel">Relativer Anstieg</a></li>
-  <li><a href="#apocalypse">Apocalypse Day</a></li>
-  <li><a href="#oldnews">Older News</a></li>
-  </ul>
-<hr>
-<h3><a id="flatten">Flattening the curve</a></h3>
-<center>
-<img width="90%" src="plots/plot.gif">
-</center>
-Der Plot zeigt die Gesamtzahl der am Corona-Virus erkrankten Menschen 
-in Deutschland auf einer logarithmischen Skala,
-sowie diese Zahl nach Bundesl&auml;ndern aufgespalten.
-Zus&auml;tzlich ist ein exponentieller Fit an die Gesamtzahl eingezeichnet.
-Der Schnittpunkt mit der gr&uuml;nen horizontalen Linie entspricht dem
-Zeitpunkt, an dem alle in Deutschland lebenden Menschen infiziert sind
-(gem&auml;&szlig; diesem sehr vereinfachten exponentiellen Modell).
-<p>
-Der Schnittpunkt wandert tendenziell in die Zukunft, was bedeutet, dass
-die exponentielle Infizierungsrate abnimmt. Diese Verschiebung
-ist im Plot <a href="#apocalypse">weiter unten</a> gezeigt.
-</td>
-</table>
-<hr>
-<h3><a id="germany">Deutschland</a></h3>
-Hier nochmal die aktuellen Zahlen in linearer Auftragung.
-Links: absolute Zahlen; rechts: pro 1000 Einwohner.
-Der exponentielle Fit bezieht nur die letzten 10 Tage mit ein.
-<p>
 <img class="zoomr" width="45%" src="plots/plot_germany-0.jpg">
 <img class="zooml" width="45%" src="plots/plotnorm_germany.jpg">
-</p>
-
 <hr>
-
-<h3><a id="europe">Europa</a></h3>
-
-Die selben Plots f&uuml;r Europa.
-<p>
-<img class="zoomr"  width="45%" src="plots/plot_europe-0.jpg">
-<img class="zooml"  width="45%" src="plots/plotnorm_europe.jpg">
-</p>
-
-<hr>
-<h3><a id="world">Welt</a></h3>
-
-Die selben Plots f&uuml;r andere L&auml;nder.
-<p>
-<img class="zoomr"  width="45%" src="plots/plot_world-0.jpg">
-<img class="zooml"  width="45%" src="plots/plotnorm_world.jpg">
-</p>
-
-<hr>
-
 <h3><a id="derzeit">Derzeit Infizierte</a></h3>
-Nun die Zahl der momentan Infizierten, also die Differenz aus Infizierten
+Zahl der momentan Infizierten, also die Differenz aus Infizierten
 und wieder Genesenen.
 <p>
 <table>
-<td align="center" colspan="2">
 <img class="zoom" width="45%" src="plots/plot_germany-2.jpg"></td><tr>
-<td><img class="zoomr" width="90%" src="plots/plot_europe-2.jpg"></td><td>
-<img class="zooml" width="90%" src="plots/plot_world-2.jpg"></td>
 </table>
 </p>
 
