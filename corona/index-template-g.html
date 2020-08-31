@@ -42,15 +42,10 @@ transform: scale(1.8) translateX(-20%);
 <body>
 <h2>Deutschland</h2>
 <hr>
-<table width="100%" border="0">
-<td valign="top">
 &copy; 2020 by R. Harlander<br>
 based on data taken from <a href="https://interaktiv.morgenpost.de/corona-virus-karte-infektionen-deutschland-weltweit/">this URL</a>
-</td>
-</table>
 <hr>
 <h3>Infizierte (kumulativ)</h3>
-<ul>
 <img class="zoomr" width="45%" src="plots/plot_germany-0.jpg">
 <img class="zooml" width="45%" src="plots/plotnorm_germany.jpg">
 <hr>
@@ -58,9 +53,7 @@ based on data taken from <a href="https://interaktiv.morgenpost.de/corona-virus-
 Zahl der momentan Infizierten, also die Differenz aus Infizierten
 und wieder Genesenen.
 <p>
-<table>
 <img class="zoom" width="45%" src="plots/plot_germany-2.jpg"></td><tr>
-</table>
 </p>
 
 <hr>
@@ -71,17 +64,8 @@ nicht-mehr-Infizierten ("removed") pro Tag in Deutschland, Europa und
 anderen L&auml;nder ("world"), gemittelt &uuml;ber 10-Tage-Intervalle.
 Rechts: aufgeschl&uuml;sselt nach L&auml;ndern, pro 1000 Einwohner.
 <p>
-<table>
-<td><img class="zoomr"  width="90%" src="plots/plot_germany-3.jpg"></td>
-<td><img class="zooml"  width="90%" src="plots/plotratnorm_germany.jpg"></td>
-<tr>
-<td><img class="zoomr"  width="90%" src="plots/plot_europe-3.jpg"></td>
-<td><img class="zooml"  width="90%" src="plots/plotratnorm_europe.jpg"></td>
-<tr>
-<td><img class="zoomr"  width="90%" src="plots/plot_world-3.jpg"></td>
-<td><img class="zooml"  width="90%" src="plots/plotratnorm_world.jpg"></td>
-<tr>
-</table>
+<img class="zoomr"  width="45%" src="plots/plot_germany-3.jpg">
+<img class="zooml"  width="45%" src="plots/plotratnorm_germany.jpg">
 </p>
 
 <hr>
@@ -98,16 +82,12 @@ neu genesenen.<sup><a href="#rexpl">(1)</a></sup>
 Um statistische Schwankungen
 klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall:
 <p>
-<table>
-<td align="center" colspan="2">
-<img class="zoom" width="45%" src="plots/plot_germany-4.jpg"></td><tr>
-<td><img class="zoomr"  width="90%" src="plots/plot_europe-4.jpg"></td><td>
-    <img class="zooml"  width="90%" src="plots/plot_world-4.jpg"></td>
-</table>
+<img class="zoom" width="45%" src="plots/plot_germany-4.jpg">
 </p>
 Blau gestrichelt gezeichnet ist der R-Wert, wie er nach meiner
 Interpretation
-<a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">vom
+<a
+href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">vom
 RKI gesch&auml;tzt</a> wird.<sup><a href="#rrkierkl">(2)</a></sup> 
 Demgem&auml;&szlig; ergibt er sich am Tag n
 als einfaches Verh&auml;ltnis der Neu-Infektionen am Tag n und am Tag
@@ -133,13 +113,8 @@ glatter wird.
   <p>
     Diese Plots zeigen, wie viele Menschen sich pro Tag neu infiziert haben (violett) bzw. nicht mehr infiziert sind (gr&uuml;n), und zwar bezogen auf die Anzahl der aktuell Infizierten (wiederum alles gemittelt &uuml;ber 10 Tage). Ein Wert von "20%" im Plot hei&szlig;t also, dass auf 5 aktuell Infizierte 1 neu Infizierter (violett) bzw. 1 neu Genesener (gr&uuml;n) kommt.</p>
 <p>Die Plots sehen den <a href="#repro">R<sub>obl</sub>-Plots</a> sehr &auml;hnlich. Das ist kein Wunder, weil sie ja auch etwas &auml;hnliches zeigen, aber meiner Meinung nach ist dieser relative Anstieg viel klarer als R.</p>
-  <p>
-<table>
-<td align="center" colspan="2">
+<p>
 <img class="zoom" width="45%" src="plots/plot_germany-5.jpg"></td><tr>
-<td><img class="zoomr"  width="90%" src="plots/plot_europe-5.jpg"></td><td>
-    <img class="zooml"  width="90%" src="plots/plot_world-5.jpg"></td>
-</table>
 </p>
 
 <a id="apocalypse"><h3>Apocalypse Day</h3></a> Die y-Achse zeigt den
