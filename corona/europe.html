@@ -1,42 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  background-color: white;
-}
-h2 {
-  font-size: 18px;
-}
-* {
-  font-family: verdana;
-  font-size: 14px;
-}
-img.xzoomr {
-overflow: hidden; /* [1.2] Hide the overflowing of child elements */
-transition: transform .5s ease-in-out;
-}
-img.xzoomr:hover {
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-transform: scale(1.8) translateX(30%);
-}
-img.xzoom {
-overflow: hidden; /* [1.2] Hide the overflowing of child elements */
-transition: transform .5s ease-in-out;
-}
-img.xzoom:hover {
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-transform: scale(1.8) translateX(0%);
-}
-img.xzooml {
-overflow: hidden; /* [1.2] Hide the overflowing of child elements */
-transition: transform .5s ease-in-out;
-}
-img.xzooml:hover {
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-transform: scale(1.8) translateX(-20%);
-}
-</style>
+    <link rel="stylesheet" type="text/css" href="corona.css">
+</head>
 <hr>
 <title>Corona Virus &ndash; Europa</title>
 <body>
@@ -50,62 +16,63 @@ transform: scale(1.8) translateX(-20%);
 based on data taken from <a href="https://interaktiv.morgenpost.de/corona-virus-karte-infektionen-deutschland-weltweit/">this URL</a>
 </td>
 <td>
-  Stand: 16. October 2020
+  Stand: 17. October 2020
 </td>
 </table>
 <hr>
-<h3><a id="infiziert">Infizierte (kumulativ)</a>
-  (Europa &ndash; auf Plot klicken, um Alle L&auml;nder zu sehen) </h3>
-<a href="world.html#infiziert"><img
-					title="click to see Alle L&auml;nder"
-					class="zoomr"
-					width="45%" src="plots/plot_europe-0.jpg"></a>
-<a href="world.html#infiziert"><img
-					title="click to see Alle L&auml;nder"
-					class="zooml"
-					width="45%"
-					src="plots/plotnorm_europe.jpg"></a>
+<h3><a id="infiziert">Infizierte (kumulativ)</a></h3>
+Europa [<a href="world.html#infiziert">Alle L&auml;nder</a>]
+[<a href="germany.html#infiziert">Deutschland</a>]<p></p>
+<a class="lightbox" href="#infpic1">
+   <img src="plots/plot_europe-0.jpg"></a> 
+<div class="lightbox-target" id="infpic1">
+   <img src="plots/plot_europe-0.jpg"/>
+   <a class="lightbox-close" href="#infiziert"></a></div>
+<a class="lightbox" href="#infpic2">
+   <img src="plots/plotnorm_europe.jpg"></a> 
+<div class="lightbox-target" id="infpic2">
+   <img src="plots/plotnorm_europe.jpg"/>
+   <a class="lightbox-close" href="#infiziert"></a></div>
 <hr>
-<h3><a id="derzeit">Derzeit Infizierte</a>
-  (Europa &ndash; auf Plot klicken, um Alle L&auml;nder zu sehen) </h3>
+<h3><a id="derzeit">Derzeit Infizierte</a></h3>
+Europa [<a href="world.html#derzeit">Alle L&auml;nder</a>]
+[<a href="germany.html#derzeit">Deutschland</a>]<p></p>
 Zahl der momentan Infizierten, also die Differenz aus Infizierten
 und wieder Genesenen.
-<p>
-<table>
-<a href="world.html#derzeit"><img class="zoom" width="45%"
-       title="click to see Alle L&auml;nder"
-       src="plots/plot_europe-2.jpg"></a></td><tr>
-</table>
-</p>
+<p></p>
+<a class="lightbox" href="#derzeitpic">
+   <img src="plots/plot_europe-2.jpg"></a> 
+<div class="lightbox-target" id="derzeitpic">
+   <img src="plots/plot_europe-2.jpg"/>
+   <a class="lightbox-close" href="#derzeit"></a></div>
 
 <hr>
 
-<h3><a id="tagesanstieg">Tagesanstieg</a>
-  (Europa &ndash; auf Plot klicken, um Alle L&auml;nder zu sehen) </h3>
+<h3><a id="tagesanstieg">Tagesanstieg</a></h3>
+Europa [<a href="world.html#tagesanstieg">Alle L&auml;nder</a>]
+[<a href="germany.html#tagesanstieg">Deutschland</a>]<p></p>
 Als n&auml;chstes die Zahl der
 Neu-Infektionen ("new infections") und die Zahl der neu
 nicht-mehr-Infizierten ("removed") pro Tag in Europa,
 gemittelt &uuml;ber 10-Tage-Intervalle.
 Rechts: aufgeschl&uuml;sselt nach L&auml;ndern, pro 1000 Einwohner.
-<p>
-<table>
-  <td>
-    <a href="world.html#tagesanstieg"><img
-					       title="click to see Alle L&auml;nder"
-						 class="zoomr"
-						 width="90%"
-						 src="plots/plot_europe-3.jpg"></a></td>
-  <td>
-    <a href="world.html#tagesanstieg"><img
-					       title="click to see Alle L&auml;nder"
-					       class="zooml"  width="90%" src="plots/plotratnorm_europe.jpg"></a></td>
-</table>
-</p>
+<p></p>
+<a class="lightbox" href="#taganpic1">
+   <img src="plots/plot_europe-3.jpg"></a> 
+<div class="lightbox-target" id="taganpic1">
+   <img src="plots/plot_europe-3.jpg"/>
+   <a class="lightbox-close" href="#tagesanstieg"></a></div>
+<a class="lightbox" href="#taganpic2">
+   <img src="plots/plotratnorm_europe.jpg"></a> 
+<div class="lightbox-target" id="taganpic2">
+   <img src="plots/plotratnorm_europe.jpg"/>
+   <a class="lightbox-close" href="#tagesanstieg"></a></div>
 
 <hr>
 
-<h3><a id="repro">Reproduktionszahl R<sub>obl</sub></a>
-  (Europa &ndash; auf Plot klicken, um Alle L&auml;nder zu sehen) </h3>
+<h3><a id="repro">Reproduktionszahl R<sub>obl</sub></a></h3>
+Europa [<a href="world.html#repro">Alle L&auml;nder</a>]
+[<a href="germany.html#repro">Deutschland</a>]<p></p>
 Jetzt noch die Reproduktionszahl, berechnet 
 <a href="https://de.wikipedia.org/wiki/SIR-Modell">gem&auml;&szlig;</a>
 R<sub>obl</sub>
@@ -115,12 +82,11 @@ neu genesenen.<sup><a href="#rexpl">(1)</a></sup>
 Um statistische Schwankungen
 klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall:
 <p>
-<table>
-<td align="center" colspan="2">
-  <a href="world.html#repro"><img
-					       title="click to see Alle L&auml;nder"
-					     class="zoom" width="45%" src="plots/plot_europe-4.jpg"></a></td>
-</table>
+<a class="lightbox" href="#repropic">
+   <img src="plots/plot_europe-4.jpg"></a> 
+<div class="lightbox-target" id="repropic">
+   <img src="plots/plot_europe-4.jpg"/>
+   <a class="lightbox-close" href="#repro"></a></div>
 </p>
 Blau gestrichelt gezeichnet ist der R-Wert, wie er nach meiner
 Interpretation
@@ -147,18 +113,22 @@ glatter wird.
   <hr>
 
   <h3><a id="anstiegrel">Relativer Anstieg</a>
-  (Europa &ndash; auf Plot klicken, um Alle L&auml;nder zu sehen) </h3>
+Europa [<a href="world.html#anstiegrel">Alle L&auml;nder</a>]
+[<a href="germany.html#anstiegrel">Deutschland</a>]<p></p>
   <p>
     Diese Plots zeigen, wie viele Menschen sich pro Tag neu infiziert haben (violett) bzw. nicht mehr infiziert sind (gr&uuml;n), und zwar bezogen auf die Anzahl der aktuell Infizierten (wiederum alles gemittelt &uuml;ber 10 Tage). Ein Wert von "20%" im Plot hei&szlig;t also, dass auf 5 aktuell Infizierte 1 neu Infizierter (violett) bzw. 1 neu Genesener (gr&uuml;n) kommt.</p>
 <p>Die Plots sehen den <a href="#repro">R<sub>obl</sub>-Plots</a> sehr &auml;hnlich. Das ist kein Wunder, weil sie ja auch etwas &auml;hnliches zeigen, aber meiner Meinung nach ist dieser relative Anstieg viel klarer als R.</p>
   <p>
-<table>
-<td align="center" colspan="2">
-<a href="world.html#anstiegrel"><img class="zoom" width="45%" src="plots/plot_europe-5.jpg"></a></td></table>
+<a class="lightbox" href="#anrelpic">
+   <img src="plots/plot_europe-5.jpg"></a> 
+<div class="lightbox-target" id="anrelpic">
+   <img src="plots/plot_europe-5.jpg"/>
+   <a class="lightbox-close" href="#anstiegrel"></a></div>
 </p>
-
-  <h3><a id="apocalypse">Apocalypse day</a> (Europa &ndash; auf
-  Plot klicken, um Alle L&auml;nder zu sehen) </h3> Die y-Achse zeigt
+  <h3><a id="apocalypse">Apocalypse day</a></h3>
+Europa [<a href="world.html#apocalypse">Alle L&auml;nder</a>]
+[<a href="germany.html#apocalypse">Deutschland</a>]<p></p>
+  Die y-Achse zeigt
   den voraussichtlichen Tag, an dem alle Einwohner infiziert sind,
   berechnet am Tag x unter Annahme exponentiellen Wachstums (schwarze
   Linie im linken Plot <a href="#infiziert">hier</a>).  Der rechte
@@ -168,18 +138,17 @@ glatter wird.
   infiziert sind, immer n&auml;her. Der <i>Doomsday</i> ergibt sich aus
   der Gleichung x=y: Das ist der Tag, an dem alle infiziert sind, wenn
   die Entwicklung so weiter geht.
-<p>
-  <center>
-    <a href="world.html#apocalypse"><img					     					title="click to see Alle L&auml;nder"
-
-					     class="zoom" width="45%" src="plots/apo_europe.jpg">
-    </a>
-    <a href="world.html#apocalypse"><img					     					title="click to see Alle L&auml;nder"
-
-					     class="zoom" width="45%" src="plots/apo_europe_zoom.jpg">
-    </a>
-  </center>
-</p>
+<p></p>
+<a class="lightbox" href="#apopic1">
+   <img src="plots/apo_europe.jpg"></a> 
+<div class="lightbox-target" id="apopic1">
+   <img src="plots/apo_europe.jpg"/>
+   <a class="lightbox-close" href="#apocalypse"></a></div>
+<a class="lightbox" href="#apopic2">
+   <img src="plots/apo_europe_zoom.jpg"></a> 
+<div class="lightbox-target" id="apopic2">
+   <img src="plots/apo_europe_zoom.jpg"/>
+   <a class="lightbox-close" href="#apocalypse"></a></div>
 <hr>
 
 <h3>Erl&auml;uterungen</h3> 
