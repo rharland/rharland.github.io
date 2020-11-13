@@ -22,12 +22,17 @@ border: 3px solid white;
 box-shadow: 0px 0px 8px rgba(0,0,0,.3);
 }
 
+a.lightboxsmall img {
+width: 35%;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+}
+
 /* Styles the lightbox, removes it from sight and adds the fade-in transition */
 
 .lightbox-target {
 position: fixed;
 top: -100%;
-width: 100%;
 background: rgba(0,0,0,.7);
 width: 100%;
 opacity: 0;
