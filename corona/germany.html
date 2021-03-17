@@ -27,7 +27,7 @@ based on data taken from <a href="https://interaktiv.morgenpost.de/corona-virus-
   gibt's <a href="../corona-FebNov2020/germany.html">hier</a>.
   </p>
 <td border="1">
-  Stand: 16. M&auml;rz 2021
+  Stand: 17. M&auml;rz 2021
 </td>
 </table>
 <iframe src="news.html" border="0" width="100%"></iframe>
@@ -45,23 +45,23 @@ Deutschland
 [<a href="world.html#topscorer">Andere L&auml;nder</a>]</p>
 <table>
   <td></td><td></td><td><i>Tage bis zur Verdopplung</i><tr>
-<td align="right">1.</td><td>Thueringen</td><td align="center">105.2</td><tr>
-<td align="right">2.</td><td>Sachsen-Anhalt</td><td align="center">118.6</td><tr>
-<td align="right">3.</td><td>Niedersachsen</td><td align="center">119.6</td><tr>
-<td align="right">4.</td><td>Mecklenburg-Vorpommern</td><td align="center">123.4</td><tr>
-<td align="right">5.</td><td>Hamburg</td><td align="center">143.3</td><tr>
-<td align="right">6.</td><td>Schleswig-Holstein</td><td align="center">147.3</td><tr>
-<td align="right">7.</td><td>Bremen</td><td align="center">162.9</td><tr>
-<td align="right">8.</td><td>Hessen</td><td align="center">163.5</td><tr>
-<td align="right">9.</td><td>Gesamt</td><td align="center">171.6</td><tr>
-<td align="right">10.</td><td>Nordrhein-Westfalen</td><td align="center">175.6</td><tr>
-<td align="right">11.</td><td>Bayern</td><td align="center">179.9</td><tr>
-<td align="right">12.</td><td>Baden-Wuerttemberg</td><td align="center">181.0</td><tr>
-<td align="right">13.</td><td>Brandenburg</td><td align="center">186.8</td><tr>
-<td align="right">14.</td><td>Sachsen</td><td align="center">187.7</td><tr>
-<td align="right">15.</td><td>Rheinland-Pfalz</td><td align="center">190.9</td><tr>
-<td align="right">16.</td><td>Berlin</td><td align="center">195.4</td><tr>
-<td align="right">17.</td><td>Saarland</td><td align="center">258.2</td><tr>
+<td align="right">1.</td><td>Thueringen</td><td align="center">117.6</td><tr>
+<td align="right">2.</td><td>Mecklenburg-Vorpommern</td><td align="center">128.7</td><tr>
+<td align="right">3.</td><td>Sachsen-Anhalt</td><td align="center">133.7</td><tr>
+<td align="right">4.</td><td>Niedersachsen</td><td align="center">139.0</td><tr>
+<td align="right">5.</td><td>Hamburg</td><td align="center">151.9</td><tr>
+<td align="right">6.</td><td>Schleswig-Holstein</td><td align="center">154.1</td><tr>
+<td align="right">7.</td><td>Bremen</td><td align="center">175.9</td><tr>
+<td align="right">8.</td><td>Hessen</td><td align="center">176.4</td><tr>
+<td align="right">9.</td><td>Gesamt</td><td align="center">177.9</td><tr>
+<td align="right">10.</td><td>Baden-Wuerttemberg</td><td align="center">190.9</td><tr>
+<td align="right">11.</td><td>Nordrhein-Westfalen</td><td align="center">192.3</td><tr>
+<td align="right">12.</td><td>Bayern</td><td align="center">199.5</td><tr>
+<td align="right">13.</td><td>Brandenburg</td><td align="center">200.1</td><tr>
+<td align="right">14.</td><td>Berlin</td><td align="center">200.5</td><tr>
+<td align="right">15.</td><td>Sachsen</td><td align="center">209.3</td><tr>
+<td align="right">16.</td><td>Rheinland-Pfalz</td><td align="center">211.8</td><tr>
+<td align="right">17.</td><td>Saarland</td><td align="center">261.2</td><tr>
 <!-- $$$TOPSCORER$$$ -->      
 </table>
 <hr>
@@ -151,29 +151,10 @@ klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall.
    <img src="plots/plot_germany-4.jpg"/>
    <a class="lightbox-close" href="#repro"></a></div>
 </p>
-Blau gestrichelt gezeichnet ist der R-Wert, wie er nach meiner
-Interpretation
-<a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">vom
-RKI gesch&auml;tzt</a> wird.<sup><a href="#rrkierkl">(2)</a></sup> 
-Demgem&auml;&szlig; ergibt er sich am Tag n
-als einfaches Verh&auml;ltnis der Neu-Infektionen am Tag n und am Tag
-n-4, wobei diese Werte jeweils &uuml;ber 3 Tage gemittelt sind. Das
-l&auml;sst sich schreiben als (I(n)-I(n-4))/(I(n-4)-I(n-8)), mit I(n) der Infektionszahl am Tag n.
-<p>
-Man beachte, dass in diese Berechnung die nicht genau bekannte
-Regenerationszeit eingeht, die auf 4 Tage gesch&auml;tzt wird (daher die
-n-4 und n-8 in obiger Formel). Dass obige Zahlen nicht genau mit denen
-des RKI &uuml;bereinstimmen liegt vermutlich daran, dass das RKI eine
-Wahrscheinlichkeitsverteilung f&uuml;r die Regenerationszeit verwendet,
-wodurch die Berechnung etwas komplizierter und der Verlauf vermutlich
-glatter wird.
-<p>
-  In meine Berechnung von R (obige rote Kurve, als R<sub>obl</sub> bezeichnet) geht keinerlei Sch&auml;tzung ein: sie beruht ganz allein auf Daten, sowie dem <a href="https://de.wikipedia.org/wiki/SIR-Modell">SIR-Modell</a> (mit geringf&uuml;gigen N&auml;herungen).
-<p>
-  Meiner Meinung nach sind sowieso die folgenden Plots viel
-  einleuchtender als dieser omin&ouml;se R-Plot (egal ob "obl" oder
-  "RKI").
-  <hr>
+Beachte, dass R<sub>obl</sub> <i>nicht</i> der R-Wert des RKI ist. 
+<a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">R-Wert des RKI</a> ist (siehe dazu auch
+<a href="#rrkierkl">hier</a>).
+<hr>
 
   <h3><a id="anstiegrel">Relativer Anstieg</a></h3>
   <p>

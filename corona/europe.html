@@ -27,7 +27,7 @@ based on data taken from <a href="https://interaktiv.morgenpost.de/corona-virus-
   gibt's <a href="../corona-FebNov2020/europe.html">hier</a>.
   </p>
 <td border="1">
-  Stand: 16. M&auml;rz 2021
+  Stand: 17. M&auml;rz 2021
 </td>
 </table>
 <iframe src="news.html" border="0" width="100%"></iframe>
@@ -45,23 +45,23 @@ Europa
 [<a href="germany.html#topscorer">Deutschland</a>]</p>
 <table>
   <td></td><td></td><td><i>Tage bis zur Verdopplung</i><tr>
-<td align="right">1.</td><td>Finnland</td><td align="center">60.7</td><tr>
-<td align="right">2.</td><td>Norwegen</td><td align="center">67.2</td><tr>
-<td align="right">3.</td><td>Griechenland</td><td align="center">68.3</td><tr>
-<td align="right">4.</td><td>Italien</td><td align="center">92.6</td><tr>
-<td align="right">5.</td><td>Tschechien</td><td align="center">94.5</td><tr>
-<td align="right">6.</td><td>Frankreich</td><td align="center">109.9</td><tr>
-<td align="right">7.</td><td>Oesterreich</td><td align="center">118.1</td><tr>
-<td align="right">8.</td><td>Niederlande</td><td align="center">136.2</td><tr>
-<td align="right">9.</td><td>Gesamt</td><td align="center">143.4</td><tr>
-<td align="right">10.</td><td>Belgien</td><td align="center">171.5</td><tr>
-<td align="right">11.</td><td>Deutschland</td><td align="center">171.6</td><tr>
-<td align="right">12.</td><td>Schweden</td><td align="center">179.5</td><tr>
-<td align="right">13.</td><td>Daenemark</td><td align="center">189.3</td><tr>
-<td align="right">14.</td><td>Schweiz</td><td align="center">381.1</td><tr>
-<td align="right">15.</td><td>Grossbritannien</td><td align="center">506.4</td><tr>
-<td align="right">16.</td><td>Spanien</td><td align="center">581.7</td><tr>
-<td align="right">17.</td><td>Portugal</td><td align="center">1025.9</td><tr>
+<td align="right">1.</td><td>Norwegen</td><td align="center">64.8</td><tr>
+<td align="right">2.</td><td>Finnland</td><td align="center">67.7</td><tr>
+<td align="right">3.</td><td>Griechenland</td><td align="center">77.7</td><tr>
+<td align="right">4.</td><td>Tschechien</td><td align="center">95.6</td><tr>
+<td align="right">5.</td><td>Italien</td><td align="center">98.0</td><tr>
+<td align="right">6.</td><td>Frankreich</td><td align="center">117.5</td><tr>
+<td align="right">7.</td><td>Oesterreich</td><td align="center">127.6</td><tr>
+<td align="right">8.</td><td>Niederlande</td><td align="center">137.5</td><tr>
+<td align="right">9.</td><td>Gesamt</td><td align="center">149.7</td><tr>
+<td align="right">10.</td><td>Schweden</td><td align="center">171.1</td><tr>
+<td align="right">11.</td><td>Deutschland</td><td align="center">177.9</td><tr>
+<td align="right">12.</td><td>Belgien</td><td align="center">182.9</td><tr>
+<td align="right">13.</td><td>Daenemark</td><td align="center">235.6</td><tr>
+<td align="right">14.</td><td>Schweiz</td><td align="center">357.2</td><tr>
+<td align="right">15.</td><td>Grossbritannien</td><td align="center">530.6</td><tr>
+<td align="right">16.</td><td>Spanien</td><td align="center">630.4</td><tr>
+<td align="right">17.</td><td>Portugal</td><td align="center">1141.7</td><tr>
 <!-- $$$TOPSCORER$$$ -->      
 </table>
 <hr>
@@ -151,29 +151,10 @@ klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall.
    <img src="plots/plot_europe-4.jpg"/>
    <a class="lightbox-close" href="#repro"></a></div>
 </p>
-Blau gestrichelt gezeichnet ist der R-Wert, wie er nach meiner
-Interpretation
-<a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">vom
-RKI gesch&auml;tzt</a> wird.<sup><a href="#rrkierkl">(2)</a></sup> 
-Demgem&auml;&szlig; ergibt er sich am Tag n
-als einfaches Verh&auml;ltnis der Neu-Infektionen am Tag n und am Tag
-n-4, wobei diese Werte jeweils &uuml;ber 3 Tage gemittelt sind. Das
-l&auml;sst sich schreiben als (I(n)-I(n-4))/(I(n-4)-I(n-8)), mit I(n) der Infektionszahl am Tag n.
-<p>
-Man beachte, dass in diese Berechnung die nicht genau bekannte
-Regenerationszeit eingeht, die auf 4 Tage gesch&auml;tzt wird (daher die
-n-4 und n-8 in obiger Formel). Dass obige Zahlen nicht genau mit denen
-des RKI &uuml;bereinstimmen liegt vermutlich daran, dass das RKI eine
-Wahrscheinlichkeitsverteilung f&uuml;r die Regenerationszeit verwendet,
-wodurch die Berechnung etwas komplizierter und der Verlauf vermutlich
-glatter wird.
-<p>
-  In meine Berechnung von R (obige rote Kurve, als R<sub>obl</sub> bezeichnet) geht keinerlei Sch&auml;tzung ein: sie beruht ganz allein auf Daten, sowie dem <a href="https://de.wikipedia.org/wiki/SIR-Modell">SIR-Modell</a> (mit geringf&uuml;gigen N&auml;herungen).
-<p>
-  Meiner Meinung nach sind sowieso die folgenden Plots viel
-  einleuchtender als dieser omin&ouml;se R-Plot (egal ob "obl" oder
-  "RKI").
-  <hr>
+Beachte, dass R<sub>obl</sub> <i>nicht</i> der R-Wert des RKI ist. 
+<a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">R-Wert des RKI</a> ist (siehe dazu auch
+<a href="#rrkierkl">hier</a>).
+<hr>
 
   <h3><a id="anstiegrel">Relativer Anstieg</a></h3>
   <p>

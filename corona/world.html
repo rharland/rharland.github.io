@@ -27,7 +27,7 @@ based on data taken from <a href="https://interaktiv.morgenpost.de/corona-virus-
   gibt's <a href="../corona-FebNov2020/world.html">hier</a>.
   </p>
 <td border="1">
-  Stand: 16. M&auml;rz 2021
+  Stand: 17. M&auml;rz 2021
 </td>
 </table>
 <iframe src="news.html" border="0" width="100%"></iframe>
@@ -45,23 +45,23 @@ Andere L&auml;nder
 [<a href="europe.html#topscorer">Europa</a>]</p>
 <table>
   <td></td><td></td><td><i>Tage bis zur Verdopplung</i><tr>
-<td align="right">1.</td><td>Philippinen</td><td align="center">91.4</td><tr>
+<td align="right">1.</td><td>Philippinen</td><td align="center">89.6</td><tr>
 <td align="right">2.</td><td>Chile</td><td align="center">110.4</td><tr>
-<td align="right">3.</td><td>Brasilien</td><td align="center">114.8</td><tr>
-<td align="right">4.</td><td>Irak</td><td align="center">115.0</td><tr>
-<td align="right">5.</td><td>Tuerkei</td><td align="center">135.8</td><tr>
-<td align="right">6.</td><td>Iran</td><td align="center">144.7</td><tr>
-<td align="right">7.</td><td>Peru</td><td align="center">156.1</td><tr>
-<td align="right">8.</td><td>Indonesien</td><td align="center">177.8</td><tr>
-<td align="right">9.</td><td>Gesamt</td><td align="center">181.4</td><tr>
-<td align="right">10.</td><td>Argentinien</td><td align="center">227.9</td><tr>
-<td align="right">11.</td><td>Mexiko</td><td align="center">286.2</td><tr>
-<td align="right">12.</td><td>Indien</td><td align="center">298.5</td><tr>
-<td align="right">13.</td><td>USA</td><td align="center">301.5</td><tr>
-<td align="right">14.</td><td>Russland</td><td align="center">302.1</td><tr>
-<td align="right">15.</td><td>Bangladesch</td><td align="center">326.1</td><tr>
-<td align="right">16.</td><td>Kolumbien</td><td align="center">392.5</td><tr>
-<td align="right">17.</td><td>Suedafrika</td><td align="center">840.1</td><tr>
+<td align="right">3.</td><td>Irak</td><td align="center">115.8</td><tr>
+<td align="right">4.</td><td>Brasilien</td><td align="center">122.4</td><tr>
+<td align="right">5.</td><td>Tuerkei</td><td align="center">133.9</td><tr>
+<td align="right">6.</td><td>Peru</td><td align="center">150.8</td><tr>
+<td align="right">7.</td><td>Iran</td><td align="center">151.5</td><tr>
+<td align="right">8.</td><td>Indonesien</td><td align="center">186.0</td><tr>
+<td align="right">9.</td><td>Gesamt</td><td align="center">189.9</td><tr>
+<td align="right">10.</td><td>Argentinien</td><td align="center">237.1</td><tr>
+<td align="right">11.</td><td>Indien</td><td align="center">281.9</td><tr>
+<td align="right">12.</td><td>Bangladesch</td><td align="center">304.1</td><tr>
+<td align="right">13.</td><td>Russland</td><td align="center">312.1</td><tr>
+<td align="right">14.</td><td>USA</td><td align="center">335.4</td><tr>
+<td align="right">15.</td><td>Mexiko</td><td align="center">362.2</td><tr>
+<td align="right">16.</td><td>Kolumbien</td><td align="center">404.9</td><tr>
+<td align="right">17.</td><td>Suedafrika</td><td align="center">935.5</td><tr>
 <!-- $$$TOPSCORER$$$ -->      
 </table>
 <hr>
@@ -151,29 +151,10 @@ klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall.
    <img src="plots/plot_world-4.jpg"/>
    <a class="lightbox-close" href="#repro"></a></div>
 </p>
-Blau gestrichelt gezeichnet ist der R-Wert, wie er nach meiner
-Interpretation
-<a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">vom
-RKI gesch&auml;tzt</a> wird.<sup><a href="#rrkierkl">(2)</a></sup> 
-Demgem&auml;&szlig; ergibt er sich am Tag n
-als einfaches Verh&auml;ltnis der Neu-Infektionen am Tag n und am Tag
-n-4, wobei diese Werte jeweils &uuml;ber 3 Tage gemittelt sind. Das
-l&auml;sst sich schreiben als (I(n)-I(n-4))/(I(n-4)-I(n-8)), mit I(n) der Infektionszahl am Tag n.
-<p>
-Man beachte, dass in diese Berechnung die nicht genau bekannte
-Regenerationszeit eingeht, die auf 4 Tage gesch&auml;tzt wird (daher die
-n-4 und n-8 in obiger Formel). Dass obige Zahlen nicht genau mit denen
-des RKI &uuml;bereinstimmen liegt vermutlich daran, dass das RKI eine
-Wahrscheinlichkeitsverteilung f&uuml;r die Regenerationszeit verwendet,
-wodurch die Berechnung etwas komplizierter und der Verlauf vermutlich
-glatter wird.
-<p>
-  In meine Berechnung von R (obige rote Kurve, als R<sub>obl</sub> bezeichnet) geht keinerlei Sch&auml;tzung ein: sie beruht ganz allein auf Daten, sowie dem <a href="https://de.wikipedia.org/wiki/SIR-Modell">SIR-Modell</a> (mit geringf&uuml;gigen N&auml;herungen).
-<p>
-  Meiner Meinung nach sind sowieso die folgenden Plots viel
-  einleuchtender als dieser omin&ouml;se R-Plot (egal ob "obl" oder
-  "RKI").
-  <hr>
+Beachte, dass R<sub>obl</sub> <i>nicht</i> der R-Wert des RKI ist. 
+<a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">R-Wert des RKI</a> ist (siehe dazu auch
+<a href="#rrkierkl">hier</a>).
+<hr>
 
   <h3><a id="anstiegrel">Relativer Anstieg</a></h3>
   <p>
