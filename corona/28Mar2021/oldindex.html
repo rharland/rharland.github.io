@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: white;
+}
+h2 {
+  font-size: 18px;
+}
+* {
+  font-family: verdana;
+  font-size: 14px;
+}
+img.zoomr {
+overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+transition: transform .5s ease-in-out;
+}
+img.zoomr:hover {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+transform: scale(1.8) translateX(30%);
+}
+img.zoom {
+overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+transition: transform .5s ease-in-out;
+}
+img.zoom:hover {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+transform: scale(1.8) translateX(0%);
+}
+img.zooml {
+overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+transition: transform .5s ease-in-out;
+}
+img.zooml:hover {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+transform: scale(1.8) translateX(-20%);
+}
+</style>
+<hr>
+<title>Corona Virus</title>
+<body>
+<h2>Studien zum Corona-Virus</h2>
+<hr>
+<table width="100%" border="0">
+<td valign="top">
+&copy; 2020 by R. Harlander<br>
+based on data taken from <a href="https://interaktiv.morgenpost.de/corona-virus-karte-infektionen-deutschland-weltweit/">this</a> and <a href="https://ourworldindata.org/covid-vaccinations">this URL</a>.
+</td>
+<td align="right">
+<i>In einer Welt, in der eine e-Funktion Erstaunen ausl&ouml;st,<br> ist
+Statistik ein Fremdwort.<br>
+<font size="-1">J. Schnelzer, 2020</font>
+</td>
+</table>
+<hr>
+Stand: 28. M&auml;rz 2021<br>
+<i>Disclaimer:</i> Alle Zahlen sind h&ouml;chst inoffiziell und d&uuml;rfen
+in keiner Weise weiterverwendet werden. Die offiziellen
+Zahlen hat das <a href="https://www.rki.de">RKI</a>.
+<p>
+  Warum dann diese Seite? Weil es viele tolle Plots gibt, 
+  die es sonst nirgends gibt: 
+  ein animiertes "<a href="#flatten">flatten the curve</a>"; 
+  einen verst&auml;ndlichen R-Wert (<a href="#repro">R<sub>obl</sub></a>), 
+  der keine Geheimnisse daraus macht, was in ihm steckt; 
+  einen einzigartigen <a href="#apocalypse">Apokalypsen-Plot</a>; 
+  eine neue Darstellung des <a href="#anstiegrel">relativen Anstiegs</a>. 
+  Braucht man mehr?
+  </p>
+<hr>
+<b>News:</b>
+<dl>
+<!-- <dt><i>21. Juni 2020:</i></dt>
+<dd> Hey Robl, wo ist die sch&ouml;ne
+  <a href="alt">alte Webseite</a>? -->
+<dt><i>14. August 2020:</i><dt>
+<dd>
+  <ul>
+    <li>
+    Plots unterm Mauszeiger werden gezoomt.
+    </li>
+  </ul>
+</dd>
+<dt><i>12. August 2020:</i><dt>
+<dd>
+  <ul>
+    <li>
+    Datums-Format an den Plots ge&auml;ndert.
+    </li>
+  </ul>
+</dd>
+<dt><i>10. August 2020:</i><dt>
+<dd>
+  <ul>
+    <li>
+      An manchen Stellen sind jetzt die logarithmischen Plots ersetzt
+      durch Plots pro 1000 Einwohner. Auch hier liegen USA und Brasilien
+      ganz weit vorn.
+    </li>
+  </ul>
+</dd>
+    </dl>
+<hr>
+<ul>
+  <li><a href="#flatten">Flattening the curve</a></li>
+  <li><a href="#germany">Aktuelle Zahlen f&uuml;r Deutschland</a></li>
+  <li><a href="#europe">Aktuelle Zahlen f&uuml;r Europa</a></li>
+  <li><a href="#world">Aktuelle Zahlen f&uuml;r andere L&auml;nder</a></li>
+  <li><a href="#derzeit">Derzeit Infizierte</a></li>
+  <li><a href="#neu">Tagesanstieg</a></li>
+  <li><a href="#repro">Reproduktionszahl R<sub>obl</sub></a></li>
+  <li><a href="#anstiegrel">Relativer Anstieg</a></li>
+  <li><a href="#apocalypse">Apocalypse Day</a></li>
+  <li><a href="#oldnews">Older News</a></li>
+  </ul>
+<hr>
+<h3><a id="flatten">Flattening the curve</a></h3>
+<center>
+<img width="90%" src="plots/plot.gif">
+</center>
+Der Plot zeigt die Gesamtzahl der am Corona-Virus erkrankten Menschen 
+in Deutschland auf einer logarithmischen Skala,
+sowie diese Zahl nach Bundesl&auml;ndern aufgespalten.
+Zus&auml;tzlich ist ein exponentieller Fit an die Gesamtzahl eingezeichnet.
+Der Schnittpunkt mit der gr&uuml;nen horizontalen Linie entspricht dem
+Zeitpunkt, an dem alle in Deutschland lebenden Menschen infiziert sind
+(gem&auml;&szlig; diesem sehr vereinfachten exponentiellen Modell).
+<p>
+Der Schnittpunkt wandert tendenziell in die Zukunft, was bedeutet, dass
+die exponentielle Infizierungsrate abnimmt. Diese Verschiebung
+ist im Plot <a href="#apocalypse">weiter unten</a> gezeigt.
+</td>
+</table>
+<hr>
+<h3><a id="germany">Deutschland</a></h3>
+Hier nochmal die aktuellen Zahlen in linearer Auftragung.
+Links: absolute Zahlen; rechts: pro 1000 Einwohner.
+Der exponentielle Fit bezieht nur die letzten 10 Tage mit ein.
+<p>
+<img class="zoomr" width="45%" src="plots/plot_germany-0.jpg">
+<img class="zooml" width="45%" src="plots/plotnorm_germany.jpg">
+</p>
+
+<hr>
+
+<h3><a id="europe">Europa</a></h3>
+
+Die selben Plots f&uuml;r Europa.
+<p>
+<img class="zoomr"  width="45%" src="plots/plot_europe-0.jpg">
+<img class="zooml"  width="45%" src="plots/plotnorm_europe.jpg">
+</p>
+
+<hr>
+<h3><a id="world">Welt</a></h3>
+
+Die selben Plots f&uuml;r andere L&auml;nder.
+<p>
+<img class="zoomr"  width="45%" src="plots/plot_world-0.jpg">
+<img class="zooml"  width="45%" src="plots/plotnorm_world.jpg">
+</p>
+
+<hr>
+
+<h3><a id="derzeit">Derzeit Infizierte</a></h3>
+Nun die Zahl der momentan Infizierten, also die Differenz aus Infizierten
+und wieder Genesenen.
+<p>
+<table>
+<td align="center" colspan="2">
+<img class="zoom" width="45%" src="plots/plot_germany-2.jpg"></td><tr>
+<td><img class="zoomr" width="90%" src="plots/plot_europe-2.jpg"></td><td>
+<img class="zooml" width="90%" src="plots/plot_world-2.jpg"></td>
+</table>
+</p>
+
+<hr>
+
+<h3><a id="neu">Tagesanstieg</h3> Als n&auml;chstes die Zahl der
+Neu-Infektionen ("new infections") und die Zahl der neu
+nicht-mehr-Infizierten ("removed") pro Tag in Deutschland, Europa und
+anderen L&auml;nder ("world"), gemittelt &uuml;ber 10-Tage-Intervalle.
+Rechts: aufgeschl&uuml;sselt nach L&auml;ndern, pro 1000 Einwohner.
+<p>
+<table>
+<td><img class="zoomr"  width="90%" src="plots/plot_germany-3.jpg"></td>
+<td><img class="zooml"  width="90%" src="plots/plotratnorm_germany.jpg"></td>
+<tr>
+<td><img class="zoomr"  width="90%" src="plots/plot_europe-3.jpg"></td>
+<td><img class="zooml"  width="90%" src="plots/plotratnorm_europe.jpg"></td>
+<tr>
+<td><img class="zoomr"  width="90%" src="plots/plot_world-3.jpg"></td>
+<td><img class="zooml"  width="90%" src="plots/plotratnorm_world.jpg"></td>
+<tr>
+</table>
+</p>
+
+<hr>
+
+<h3><a id="repro">Reproduktionszahl R<sub>obl</sub></a></h3>
+Jetzt noch die Reproduktionszahl, berechnet 
+<a href="https://de.wikipedia.org/wiki/SIR-Modell">gem&auml;&szlig;</a>
+R<sub>obl</sub>
+= &Delta;I/&Delta;G, wobei &Delta;I die Zahl der im Zeitintervall
+&Delta;t neu infizierten Personen ist, und &Delta;G die Zahl der in &Delta;t
+neu genesenen.<sup><a href="#rexpl">(1)</a></sup>
+<!-- Der Normierungsfaktor ist N/(N-I), mit N=Einwohner Deutschlands,
+     und I=Zahl der Infizierten (Genesene mit eingerechnet).-->
+Um statistische Schwankungen
+klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall:
+<p>
+<table>
+<td align="center" colspan="2">
+<img class="zoom" width="45%" src="plots/plot_germany-4.jpg"></td><tr>
+<td><img class="zoomr"  width="90%" src="plots/plot_europe-4.jpg"></td><td>
+    <img class="zooml"  width="90%" src="plots/plot_world-4.jpg"></td>
+</table>
+</p>
+Blau gestrichelt gezeichnet ist der R-Wert, wie er nach meiner
+Interpretation
+<a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">vom
+RKI gesch&auml;tzt</a> wird.<sup><a href="#rrkierkl">(2)</a></sup> 
+Demgem&auml;&szlig; ergibt er sich am Tag n
+als einfaches Verh&auml;ltnis der Neu-Infektionen am Tag n und am Tag
+n-4, wobei diese Werte jeweils &uuml;ber 3 Tage gemittelt sind. Das
+l&auml;sst sich schreiben als (I(n)-I(n-4))/(I(n-4)-I(n-8)), mit I(n) der Infektionszahl am Tag n.
+<p>
+Man beachte, dass in diese Berechnung die nicht genau bekannte
+Regenerationszeit eingeht, die auf 4 Tage gesch&auml;tzt wird (daher die
+n-4 und n-8 in obiger Formel). Dass obige Zahlen nicht genau mit denen
+des RKI &uuml;bereinstimmen liegt vermutlich daran, dass das RKI eine
+Wahrscheinlichkeitsverteilung f&uuml;r die Regenerationszeit verwendet,
+wodurch die Berechnung etwas komplizierter und der Verlauf vermutlich
+glatter wird.
+<p>
+  In meine Berechnung von R (obige rote Kurve, als R<sub>obl</sub> bezeichnet) geht keinerlei Sch&auml;tzung ein: sie beruht ganz allein auf Daten, sowie dem <a href="https://de.wikipedia.org/wiki/SIR-Modell">SIR-Modell</a> (mit geringf&uuml;gigen N&auml;herungen).
+<p>
+  Meiner Meinung nach sind sowieso die folgenden Plots viel
+  einleuchtender als dieser omin&ouml;se R-Plot (egal ob "obl" oder
+  "RKI").
+  <hr>
+
+  <a id="anstiegrel"><h3>Relativer Anstieg</h3></a>
+  <p>
+    Diese Plots zeigen, wie viele Menschen sich pro Tag neu infiziert haben (violett) bzw. nicht mehr infiziert sind (gr&uuml;n), und zwar bezogen auf die Anzahl der aktuell Infizierten (wiederum alles gemittelt &uuml;ber 10 Tage). Ein Wert von "20%" im Plot hei&szlig;t also, dass auf 5 aktuell Infizierte 1 neu Infizierter (violett) bzw. 1 neu Genesener (gr&uuml;n) kommt.</p>
+<p>Die Plots sehen den <a href="#repro">R<sub>obl</sub>-Plots</a> sehr &auml;hnlich. Das ist kein Wunder, weil sie ja auch etwas &auml;hnliches zeigen, aber meiner Meinung nach ist dieser relative Anstieg viel klarer als R.</p>
+  <p>
+<table>
+<td align="center" colspan="2">
+<img class="zoom" width="45%" src="plots/plot_germany-5.jpg"></td><tr>
+<td><img class="zoomr"  width="90%" src="plots/plot_europe-5.jpg"></td><td>
+    <img class="zooml"  width="90%" src="plots/plot_world-5.jpg"></td>
+</table>
+</p>
+
+<a id="apocalypse"><h3>Apocalypse Day</h3></a> Die y-Achse zeigt den
+voraussichtlichen Tag, an dem alle Deutschen infiziert sind, berechnet
+am Tag x.  Die durchgezogene Linie ist ein linearer Fit durch die
+letzten 5 Tage. Die Steigung <i>a</i> dieses Fits gibt an, wie schnell
+sich der Tag entfernt/n&auml;hert, an dem alle Deutschen infiziert sind:
+pro Tag r&uuml;ckt dieser Tag um <i>a</i> Tage von uns weg.  Wenn
+also <i>a</i>&lt;1 ist, r&uuml;ckt der Tag
+n&auml;her.
+<p>
+  <center>
+    <img class="zoom" width="50%" src="plots/apo_germany.png">
+  </center>
+</p>
+<hr>
+
+<h3>Erl&auml;uterungen</h3> 
+<dl>
+<dt><a
+id="rexpl">(1)</a> Wie kann man die Formel R=&Delta;I/&Delta;G
+verstehen?</dt>
+<dd>
+<p>R ist definiert als die Zahl an Personen, 
+die jeder Infizierte im Laufe seiner Krankheit im Mittel infiziert. 
+Stellen wir uns vor, die Krankheit dauert &Delta;t=4 Tage; man ist also 4
+Tage lang ansteckend, und danach nicht mehr krank (sagen wir: genesen).  
+Am Tag 0 des Ausbruchs
+seien N Personen infiziert.  Dann sind nach 4 Tagen N*R Personen neu
+infiziert, und N Personen genesen (diejenigen, die in den ersten 4
+Tagen krank waren).  Das Verh&auml;ltnis aus beiden
+Zahlen ist (N*R)/N = R.  Am Tag 8 sind
+N*R*R Personen neu infiziert, und N*R neu genesen.
+Das Verh&auml;ltnis aus beiden Zahlen ist also
+(N*R*R)/(N*R)=R.  Am Tag 12
+ergibt sich
+(N*R*R*R)/(N*R*R)=R, usw.
+</p>
+<p>
+Das Verh&auml;ltnis aus in der Zeit &Delta;t Neu-Infizierten &Delta;I 
+zu Neu-Genesenen &Delta;G ist also immer
+einfach gleich R. Interessant ist nun, dass man hier &Delta;t
+gar nicht zu wissen braucht. Angenommen, &Delta;t w&auml;re nur halb so
+gro&szlig; wie angenommen. Dann h&auml;tte man zwar 
+die Zahl der Neu-Infizierten 
+f&auml;lschlicherweise um einen Faktor 2 zu gro&szlig; abgesch&auml;tzt,
+aber eben auch die Zahl der Neu-Genesenen. Das Verh&auml;ltnis bleibt davon
+unber&uuml;hrt.
+</p>
+<!--
+<p>
+Der Normierungsfaktor n in der <a href="#repro">Formel</a>
+R<sub>0</sub> = n &Delta;I/&Delta;G ber&uuml;cksichtigt, dass irgendwann
+so viele Leute immun sind, dass nicht mehr "gen&uuml;gend" Personen angesteckt
+werden k&ouml;nnen. Momentan (Mai 2020) spielt das keine Rolle, und es
+gilt ziemlich genau n=1.
+</p>
+-->
+</dd>
+<dt><a id="rrkierkl">(2)</a> Was macht das RKI?</dt>
+<dd>
+<p>
+Nehmen wir obiges Beispiel. Wir starten wieder mit N Infizierten am Tag 0.
+Nach 4 Tagen gibt es N*R Neu-Infizierte, nach 8 Tagen
+N*R*R, usw. Wenn man also das Verh&auml;ltnis aus
+Neu-Infizierten am Tag n und am Tag n+4 nimmt, kriegt man auch
+R. Aber: wenn man sich hier um einen Faktor zwei in der
+Regenerationszeit versch&auml;tzt, dann geht dieser Faktor direktemang in
+die R-Berechnung ein. Also: welche Methode ist jetzt besser?
+</p>
+<p>Andererseits: In den Zahlen f&uuml;r die Neu-Genesenen steckt vermutlich
+auch eine gro&szlig;e Unsicherheit: wer meldet sich schon gesund? Unter
+Umst&auml;nden sind diese Zahlen also nur gesch&auml;tzt, und jetzt kommt's:
+gesch&auml;tzt auf Grundlage der Regenerationszeit. Damit w&auml;re in
+beiden Rechenwegen (1) und (2) die gleiche Quelle der Unsicherheit. Fragt
+sich dann nur, warum die Zahlen so unterschiedlich sind.
+</dl>
+<hr>
+<h3><a id="oldnews">Older News</a></h3>
+<dl>
+<dt><i>09. Juli 2020:</i><dt>
+<dd>
+  <ul>
+    <li>
+      Neue Darstellung: <a href="#anstiegrel">Relativer Anstieg</a>
+    </li>
+  </ul>
+</dd>
+<dt><i>06. Juli 2020:</i><dt>
+<dd>
+<ul>
+<li>Die kumulative(!) Zahl der Infizierten ist in Gro&szlig;brittanien
+am 2. Juli 2020 um ca. 30.000 gefallen... Keine Ahnung, wie das geht. Auf
+jeden Fall erkl&auml;rt das, dass die Zahl der <a
+href="#neu">Neu-Infektionen</a> negativ ist.
+</li>
+</dd>
+<dt><i>04. Juli 2020:</i><dt>
+    <dd>
+      <ul>
+        <li>Die Zahlen der <a href="#neu">neu Infizierten</a> sind jetzt
+	  nach L&auml;ndern aufgeteilt.</li>
+	<li>Schaut Euch mal die <a href="#neu">Zahlen</a>
+	  f&uuml;r die USA und Brasilien an...</li>
+      </ul>
+    </dd>
+<dt><i>24. Juni 2020:</i></dt>
+<dd><ul>
+<li>
+7741 sind aktuell infiziert. Jeder f&uuml;nfte davon ist bei T&ouml;nnies
+besch&auml;ftigt.</li>
+</ul>
+</dd>
+<dt><i>21. Juni 2020:</i></dt>
+<dd>
+  <ul>
+    <li>Hat dann doch zwei Tage gedauert, bis das RKI <a href="https://www.spiegel.de/wissenschaft/coronavirus-news-am-21-juni-die-wichtigsten-entwicklungen-zu-sars-cov-2-und-covid-19-a-369f3420-0b4d-4a55-ae43-3063efdd86be">meine Zahlen best&auml;tigt</a> hat.</li>
+    <li>Ok... der <a href="#apocalypse">Apokalypse-Plot</a> nimmt gerade eine krasse <a href="https://www.tagesschau.de/regional/nordrheinwestfalen/toennies-fleischfabrik-corona-101.html">T&ouml;nnies</a>-Wendung...</li>
+</dd>
+<dt><i>19. Juni 2020:</i></dt>
+<dd> 
+<ul><li>
+<a
+href="https://www.tagesschau.de/regional/nordrheinwestfalen/toennies-fleischfabrik-corona-101.html">T&ouml;nnies</a>-Effekt:
+<a href="#repro">R<sub>obl</sub>-Wert</a> macht einen Sprung nach oben. Kann
+sich nur noch um Stunden handeln bis zur RKI-Panikmeldung. 
+</li></ul>
+</dd>
+<dt><i>31. Mai 2020:</i></dt>
+<dd>
+<ul>
+<li>Das erste Mal seit 18. M&auml;rz 2020 liegt die Zahl 
+der <a href="#derzeit">aktuell Infizierten</a> in Deutschland unter
+10.000.</li>
+</ul>
+</dd>
+<dd>
+<dt><i>28. Mai 2020:</i></dt>
+<dd>
+<ul>
+<li>Heute mal ein paar Stilbl&uuml;ten aus den Nachrichten des <i>Deutschlandfunks</i>:
+<ul>
+  <li> "Die Zahl der nachweislich Genesenen liegt einer RKI-Sch&auml;tzung
+    zufolge bei 163.200..." &ndash; Das RKI muss
+    jetzt sogar schon nachweisliche F&auml;lle sch&auml;tzen?</li>
+  <li> "Auf Grundlage dieser Daten l&auml;sst sich berechnen, dass in der
+    Bundesrepublik aktuell rund 8.100 Menschen von einer Infektion mit dem
+    Coronavirus betroffen sind." &ndash;
+    Aber nur, wenn man Minus rechnen kann.</li>
+    </ul>
+    </li>
+    </ul>
+<dt><i>27. Mai 2020</i></dt>
+  <dd>
+  <ul>
+  <li>Der <a href="#apocalypse">Apokalypse-Plot</a> hat wieder die Kurve
+  gekriegt.</li></ul></dd>
+<dt><i>24. Mai 2020</i></dt>
+  <dd><ul><li>Seit ein paar Tagen scheint die Zahl der Infektionen wieder
+    exponentiell zu wachsen, allerdings mit sehr niedriger Verdopplungsrate (ca.
+    1 Jahr). Das sieht man vor allem am
+    <a href="#apocalypse">Apokalypsen-Plot</a>: der Tag, an dem (unter
+Annahme exponentiellen Wachstums) 82 Millionen Menschen infiziert sein
+werden, ist seit ein paar Tagen immer ungef&auml;hr der selbe. Bin mal
+gespannt, wann das RKI das auch merkt.
+</li>
+</ul>
+</dd>
+</dl>
+<hr>
+<font size="-1"><a href="mailto:derrobl2009@gmail.com">contact</a>
+</body>
+</html>
