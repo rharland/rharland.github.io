@@ -8,6 +8,10 @@ h2 {
   font-family: verdana;
   font-size: 14px;
 }
+tinyfont {
+  font-family: verdana;
+  font-size: 10px;
+}
 img.xzoomr {
 overflow: hidden; /* [1.2] Hide the overflowing of child elements */
 transition: transform .5s ease-in-out;
