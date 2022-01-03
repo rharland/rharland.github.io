@@ -16,6 +16,25 @@ In <a target="_blank" href="news.html">separatem Fenster</a> anschauen.
   </ul>
 </dd>
 -->
+  <dt><i><a id="news03Jan2022">03. Januar 2022</a>:</i></dt>
+<dd>
+  <ul><li>Kennt Ihr auch Impfdurchbrecher? Wie passt das alles mit angeblichen 90% Impfschutz usw. zusammen? Mal nachrechnen.
+      <ul>
+	<li>Laut RKI (<a href="https://www.ndr.de/ratgeber/gesundheit/Corona-trotz-Impfung-Wie-haeufig-sind-Impfdurchbrueche,impfdurchbrueche100.html">zitiert vom NDR</a>) gab es im Zeitraum T zwischen 1. Februar und 23. Dezember 2021 N<sub>d</sub>=467.757 Impfdurchbr&uuml;che.</li>
+	<li>Die <a href="https://interaktiv.morgenpost.de/corona-virus-karte-infektionen-deutschland-weltweit/">Gesamtzahl der Infektionen</a> in diesem Zeitraum war N<sub>i</sub>=4.725.952. </li>
+	<li>Wir definieren den R-Wert als die Ansteckungsrate f&uuml;r Ungeimpfte. Das bezieht einerseits mit ein, wie ansteckend das Virus ist, aber auch, wie viele Kontakte die Leute haben.</li>
+	<li>Wir nehmen an, dass die Ansteckungsrate f&uuml;r Geimpfte gegeben ist durch R*(1-I), wobei R die Ansteckungsrate f&uuml;r Ungeimpfte ist, und I den Impfschutz bezeichnet: I=1 bedeutet 100% Impfschutz, I=0 kein Impfschutz. Unser Ziel ist die Berechnung von I.</li>
+	<li>Die Impfquote hat sich im Zeitraum T nat&uuml;rlich kontinuiertlich ge&auml;ndert. Wir nehmen der Einfachheit halber einen konstanten
+	  Mittelwert an, und schreiben daf&uuml;r Q  (Q=1 bedeutet, dass alle geimpft sind, w&auml;hrend bei Q=0 niemand geimpft w&auml;re).</li>
+	<li>Wenn wir die Einwohnerzahl in Deutschland mit N bezeichnen, dann ist also N*Q die Zahl der Geimpften, und N*(1-Q) die Zahl der Ungeimpften. Dann ist die Zahl der Geimpften, die sich pro Zeiteinheit anstecken, gegeben durch N*Q*R*(1-I), und damit  N<sub>d</sub>=N*Q*R*(1-I)*T. Genauso ergibt sich
+	  die Zahl der infizierten Ungeimpften als N<sub>i</sub>-N<sub>d</sub>=N*(1-Q)*R*T.</li>
+	<li>Wenn wir die erste durch die zweite Gleichung teilen, f&auml;llt die Abh&auml;ngigkeit von T, N, und R weg, und wir erhalten N<sub>d</sub>/(N<sub>i</sub>-N<sub>d</sub>)=(1-I)*Q/(1-Q), also I=1-(1-Q)*N<sub>d</sub>/(Q*(N<sub>i</sub>-N<sub>d</sub>)).</li>
+	<li>Nehmen wir mal eine Impfquote von 50% an, dann ergibt sich mit den obigen Zahlen f&uuml;r N<sub>i</sub> und N<sub>d</sub> das Ergebnis I=0.945, also ein <center><b>Impfschutz von 94.5%</b>.</center></li>
+	<li>Beachte: Geimpfte haben mehr Freiheiten, deswegen ist die Annahme, dass wir f&uuml;r sie das selbe R verwenden, konservativ. Der Impfschutz ist also vermutlich noch h&ouml;her als hier berechnet. Ebenso ist Q vermutlich kleiner als hier angenommen, was bedeutet, dass der tats&auml;chliche Impfschutz sogar <i>noch</i> h&ouml;her liegt. </li>
+	<li>Also ich bin &uuml;berzeugt: die Zahlen passen, Impfen wirkt.
+    </li>
+  </ul>
+</dd>
   <dt><i><a id="news17Dec2021">17. Dezember 2021</a>:</i></dt>
 <dd>
   <ul><li><a target="_blank" href="germany.html#repro">R<sub>obl</sub>-Wert</a> d&uuml;mpelt jetzt seit ein paar Tagen
