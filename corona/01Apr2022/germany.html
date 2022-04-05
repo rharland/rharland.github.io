@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="corona.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+<hr>
+<title>Corona Virus &ndash; Deutschland</title>
+<body>
+  <a href="index.html">Zur Hauptseite</a>
+  <h2>Studien zum Coronavirus 
+    (<a href="europe.html">Deutschland</a>)</h2>
+<hr>
+<table width="100%" border="1">
+<td valign="top">
+&copy; 2020, 2021 by R. Harlander<br>
+based on data taken from <a href="https://interaktiv.morgenpost.de/corona-virus-karte-infektionen-deutschland-weltweit/">this</a> and <a href="https://ourworldindata.org/covid-vaccinations">this URL</a>.
+<p>
+    <i>Disclaimer:</i> Alle Zahlen sind h&ouml;chst inoffiziell und
+    d&uuml;rfen in keiner Weise weiterverwendet werden. Die offiziellen
+    Zahlen hat
+    das <a href="https://www.rki.de/DE/Home/homepage_node.html">RKI</a>.
+</p>
+<p>
+  <i>Achtung:</i> Nachdem viele Geimpfte sich auch infizieren,
+  und Infizierte sich impfen lassen,
+  und Infizierte sich nochmal infizieren usw.,  stimmen viele dieser
+  Plots nicht mehr. Hier wird n&auml;mlich angenommen,
+  dass die einzelnen Gruppen
+<a target="_blank" href="https://de.wikipedia.org/wiki/Disjunkt">disjunkt</a> sind.</p>
+<p>
+Gezeigt sind die Zahlen vom 25. Februar 2020
+  bis 1. April 2022. Die Zahlen der letzten 120 Tage
+  gibt's <a href="..">hier</a>.
+<!-- Gezeigt sind nur die letzten 120 Tage. Die Zahlen vom 25. Februar 2020
+  bis 10. M&auml;rz 2022
+  gibt's <a href="17Jan2022/germany.html">hier</a>.-->
+  </p>
+<td border="1">
+  Stand: 01. April 2022
+</td>
+</table>
+<hr>
+<h3><a id="topscorer">Top scorer</a></h3>
+<p>
+      Wie viele Tage dauert es, bis sich die Zahl der Infizierten verdoppelt?
+      Der <a href="germany.html#infiziert">exponentielle Fit</a>
+      ist von der Form
+      N(t)=N<sub>0</sub>e<sup>&alpha;t</sup>. Die Verdopplungszeit T
+      ist dann einfach gegeben durch N(T)=2N<sub>0</sub>, also T=ln(2)/&alpha;.
+</p>
+Deutschland
+[<a href="europe.html#topscorer">Europa</a>]
+[<a href="world.html#topscorer">Andere L&auml;nder</a>]</p>
+<table>
+  <td></td><td></td><td><i>Tage bis zur Verdopplung</i><tr>
+<td align="right">1.</td><td>Niedersachsen</td><td align="center">52.0</td><tr>
+<td align="right">2.</td><td>Schleswig-Holstein</td><td align="center">55.1</td><tr>
+<td align="right">3.</td><td>Bremen</td><td align="center">55.1</td><tr>
+<td align="right">4.</td><td>Rheinland-Pfalz</td><td align="center">57.2</td><tr>
+<td align="right">5.</td><td>Saarland</td><td align="center">60.8</td><tr>
+<td align="right">6.</td><td>Mecklenburg-Vorpommern</td><td align="center">67.5</td><tr>
+<td align="right">7.</td><td>Baden-Wuerttemberg</td><td align="center">71.3</td><tr>
+<td align="right">8.</td><td>Hessen</td><td align="center">74.0</td><tr>
+<td align="right">9.</td><td>Gesamt</td><td align="center">74.4</td><tr>
+<td align="right">10.</td><td>Bayern</td><td align="center">74.4</td><tr>
+<td align="right">11.</td><td>Sachsen-Anhalt</td><td align="center">74.8</td><tr>
+<td align="right">12.</td><td>Thueringen</td><td align="center">75.4</td><tr>
+<td align="right">13.</td><td>Nordrhein-Westfalen</td><td align="center">84.8</td><tr>
+<td align="right">14.</td><td>Sachsen</td><td align="center">86.6</td><tr>
+<td align="right">15.</td><td>Hamburg</td><td align="center">96.3</td><tr>
+<td align="right">16.</td><td>Brandenburg</td><td align="center">111.1</td><tr>
+<td align="right">17.</td><td>Berlin</td><td align="center">130.9</td><tr>
+<!-- $$$TOPSCORER$$$ -->      
+</table>
+<hr>
+<h3><a id="pie">Torte</a></h3>
+Deutschland [<a href="europe.html#pie">Europa</a>]
+[<a href="world.html#pie">Andere L&auml;nder</a>]<p></p>
+<a class="lightboxsmall" href="#pie1">
+   <img width="10%" src="plots/pie_germany.jpg"></a> 
+<div class="lightbox-target" id="pie1">
+   <img src="plots/pie_germany.jpg"/>
+   <a class="lightbox-close" href="#pie"></a></div>
+<hr>
+<h3><a id="infiziert">Infizierte (kumulativ)</a></h3>
+Deutschland [<a href="europe.html#infiziert">Europa</a>]
+[<a href="world.html#infiziert">Andere L&auml;nder</a>]<p></p>
+<a class="lightbox" href="#infpic1">
+   <img src="plots/plot_germany-0.jpg"></a> 
+<div class="lightbox-target" id="infpic1">
+   <img src="plots/plot_germany-0.jpg"/>
+   <a class="lightbox-close" href="#infiziert"></a></div>
+<a class="lightbox" href="#infpic2">
+   <img src="plots/plotnorm_germany.jpg"></a> 
+<div class="lightbox-target" id="infpic2">
+   <img src="plots/plotnorm_germany.jpg"/>
+   <a class="lightbox-close" href="#infiziert"></a></div>
+<hr>
+<h3><a id="derzeit">Derzeit Infizierte</a></h3>
+<p>Zahl der momentan Infizierten, also die Differenz aus Infizierten
+und wieder Genesenen.</p>
+<p>
+Deutschland [<a href="europe.html#derzeit">Europa</a>]
+[<a href="world.html#derzeit">Andere L&auml;nder</a>]</p>
+<a class="lightbox" href="#derzeitpic">
+   <img src="plots/plot_germany-2.jpg"></a> 
+<div class="lightbox-target" id="derzeitpic">
+   <img src="plots/plot_germany-2.jpg"/>
+   <a class="lightbox-close" href="#derzeit"></a></div>
+
+<hr>
+
+<h3><a id="tagesanstieg">Anstieg und 7-Tage-Inzidenz</a></h3>
+<p>
+  Als n&auml;chstes die Zahl der Neu-Infektionen (linker Plot, "new
+  infections", lila) und die Zahl der neu nicht-mehr-Infizierten
+  ("removed", gr&uuml;n) in Deutschland.  Da diese Zahlen &uuml;ber
+  7 Tage gemittelt sind, kann man auch einfach durch die
+  Einwohnerzahl teilen und kriegt dann die 7-Tage-Inzidenz (lila Kurve
+  mit rechter Achsenbeschriftung), oder eben die 7-Tage-<i>Ex</i>zidenz
+  (gr&uuml;n). Rechter Plot: aufgespalten nach L&auml;ndern.
+<!-- Alles ist, wie
+auf dieser Seite ja fast &uuml;berall, gemittelt &uuml;ber
+10-Tage-Intervalle. -->
+</p>
+<p>Deutschland [<a href="europe.html#tagesanstieg">Europa</a>][<a href="world.html#tagesanstieg">Andere L&auml;nder</a>]
+</p>
+  <a class="lightbox" href="#taganpic1">
+   <img src="plots/plot_germany-3.jpg"></a> 
+<div class="lightbox-target" id="taganpic1">
+   <img src="plots/plot_germany-3.jpg"/>
+   <a class="lightbox-close" href="#tagesanstieg"></a></div>
+<a class="lightbox" href="#taganpic2">
+   <img src="plots/plotratnorm_germany.jpg"></a> 
+<div class="lightbox-target" id="taganpic2">
+   <img src="plots/plotratnorm_germany.jpg"/>
+   <a class="lightbox-close" href="#tagesanstieg"></a></div>
+
+<hr>
+
+<h3><a id="repro">Reproduktionszahl R<sub>obl</sub></a></h3>
+<p>
+Jetzt noch die Reproduktionszahl, berechnet 
+<a href="https://de.wikipedia.org/wiki/SIR-Modell">gem&auml;&szlig;</a>
+R<sub>obl</sub>
+= &Delta;I/&Delta;G, wobei &Delta;I die Zahl der im Zeitintervall
+&Delta;t neu infizierten Personen ist, und &Delta;G die Zahl der in &Delta;t
+neu genesenen.<sup><a href="#rexpl">(1)</a></sup>
+Um statistische Schwankungen
+klein zu halten, mitteln wir wieder &uuml;ber ein 10-Tage-Intervall.
+</p>
+<p>Deutschland [<a href="europe.html#repro">Europa</a>]
+[<a href="world.html#repro">Andere L&auml;nder</a>]</p>
+<a class="lightbox" href="#repropic">
+   <img src="plots/plot_germany-4.jpg"></a> 
+<div class="lightbox-target" id="repropic">
+   <img src="plots/plot_germany-4.jpg"/>
+   <a class="lightbox-close" href="#repro"></a></div>
+</p>
+Beachte, dass R<sub>obl</sub> <i>nicht</i> der
+<a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Projekte_RKI/Nowcasting.html">R-Wert des RKI</a> ist (siehe dazu auch
+<a href="#rrkierkl">hier</a>).
+<hr>
+
+  <h3><a id="anstiegrel">Relativer Anstieg</a></h3>
+  <p>
+    Diese Plots zeigen, wie viele Menschen sich pro Tag neu infiziert haben (violett) bzw. nicht mehr infiziert sind (gr&uuml;n), und zwar bezogen auf die Anzahl der aktuell Infizierten (wiederum alles gemittelt &uuml;ber 7 Tage). Ein Wert von "20%" im Plot hei&szlig;t also, dass auf 5 aktuell Infizierte 1 neu Infizierter (violett) bzw. 1 neu Genesener (gr&uuml;n) kommt.</p>
+<p>Die Plots sehen den <a href="#repro">R<sub>obl</sub>-Plots</a> sehr &auml;hnlich. Das ist kein Wunder, weil sie ja auch etwas &auml;hnliches zeigen, aber meiner Meinung nach ist dieser relative Anstieg viel klarer als R.</p>
+<p>Deutschland [<a href="europe.html#anstiegrel">Europa</a>]
+  [<a href="world.html#anstiegrel">Andere L&auml;nder</a>]</p>
+<p>
+<a class="lightbox" href="#anrelpic">
+   <img src="plots/plot_germany-5.jpg"></a> 
+<div class="lightbox-target" id="anrelpic">
+   <img src="plots/plot_germany-5.jpg"/>
+   <a class="lightbox-close" href="#anstiegrel"></a></div>
+</p>
+  <h3><a id="apocalypse">Apocalypse day</a></h3>
+  <p>Die
+y-Achse zeigt den voraussichtlichen Tag, an dem alle Einwohner infiziert
+sind, berechnet am Tag x unter Annahme exponentiellen Wachstums
+(schwarze Linie im linken Plot <a href="#infiziert">hier</a>).  Der
+rechte folgende Plot zeigt nur die letzten 50 Tage (gestrichelte Box im
+linken Plot). Die rote gestrichelte Linie ist ein quadratischer Fit
+durch die letzten 7 Tage.  Der <i>Doomsday</i> ergibt sich aus dem
+Schnittpunkt dieser Kurve mit der schwarzen gestrichelten Kurve (danke
+an
+  <a href="https://www.instagram.com/ohleris/">Chris</a>
+  f&uuml;r den Verbesserungsvorschlag!). Das ist der
+Tag, an dem alle infiziert sind, <i>wenn die Entwicklung der letzten
+    Tage so weiter geht.</i>
+  </p>
+  <p>
+    Siehe auch <a target="_blank" href="news.html#news22nov2020">hier</a>.
+    </p>
+<p>
+  Deutschland
+  [<a href="europe.html#apocalypse">Europa</a>]
+  [<a href="world.html#apocalypse">Andere L&auml;nder</a>]
+</p>
+<a class="lightbox" href="#apopic1">
+   <img src="plots/apo_germany.jpg"></a> 
+<div class="lightbox-target" id="apopic1">
+   <img src="plots/apo_germany.jpg"/>
+   <a class="lightbox-close" href="#apocalypse"></a></div>
+<a class="lightbox" href="#apopic2">
+   <img src="plots/apo_germany_zoom.jpg"></a> 
+<div class="lightbox-target" id="apopic2">
+   <img src="plots/apo_germany_zoom.jpg"/>
+   <a class="lightbox-close" href="#apocalypse"></a></div>
+<hr>
+
+<h3>Erl&auml;uterungen</h3> 
+<dl>
+<dt><a
+id="rexpl">(1)</a> Wie kann man die Formel R=&Delta;I/&Delta;G
+verstehen?</dt>
+<dd>
+<p>R ist definiert als die Zahl an Personen, 
+die jeder Infizierte im Laufe seiner Krankheit im Mittel infiziert. 
+Stellen wir uns vor, die Krankheit dauert &Delta;t=4 Tage; man ist also 4
+Tage lang ansteckend, und danach nicht mehr krank (sagen wir: genesen).  
+Am Tag 0 des Ausbruchs
+seien N Personen infiziert.  Dann sind nach 4 Tagen N*R Personen neu
+infiziert, und N Personen genesen (diejenigen, die in den ersten 4
+Tagen krank waren).  Das Verh&auml;ltnis aus beiden
+Zahlen ist (N*R)/N = R.  Am Tag 8 sind
+N*R*R Personen neu infiziert, und N*R neu genesen.
+Das Verh&auml;ltnis aus beiden Zahlen ist also
+(N*R*R)/(N*R)=R.  Am Tag 12
+ergibt sich
+(N*R*R*R)/(N*R*R)=R, usw.
+</p>
+<p>
+Das Verh&auml;ltnis aus in der Zeit &Delta;t Neu-Infizierten &Delta;I 
+zu Neu-Genesenen &Delta;G ist also immer
+einfach gleich R. Interessant ist nun, dass man hier &Delta;t
+gar nicht zu wissen braucht. Angenommen, &Delta;t w&auml;re nur halb so
+gro&szlig; wie angenommen. Dann h&auml;tte man zwar 
+die Zahl der Neu-Infizierten 
+f&auml;lschlicherweise um einen Faktor 2 zu gro&szlig; abgesch&auml;tzt,
+aber eben auch die Zahl der Neu-Genesenen. Das Verh&auml;ltnis bleibt davon
+unber&uuml;hrt.
+</p>
+<!--
+<p>
+Der Normierungsfaktor n in der <a href="#repro">Formel</a>
+R<sub>0</sub> = n &Delta;I/&Delta;G ber&uuml;cksichtigt, dass irgendwann
+so viele Leute immun sind, dass nicht mehr "gen&uuml;gend" Personen angesteckt
+werden k&ouml;nnen. Momentan (Mai 2020) spielt das keine Rolle, und es
+gilt ziemlich genau n=1.
+</p>
+-->
+</dd>
+<dt><a id="rrkierkl">(2)</a> Was macht das RKI?</dt>
+<dd>
+<p>
+Nehmen wir obiges Beispiel. Wir starten wieder mit N Infizierten am Tag 0.
+Nach 4 Tagen gibt es N*R Neu-Infizierte, nach 8 Tagen
+N*R*R, usw. Wenn man also das Verh&auml;ltnis aus
+Neu-Infizierten am Tag n und am Tag n+4 nimmt, kriegt man auch
+R. Aber: wenn man sich hier um einen Faktor zwei in der
+Regenerationszeit versch&auml;tzt, dann geht dieser Faktor direktemang in
+die R-Berechnung ein. Also: welche Methode ist jetzt besser?
+</p>
+<p>Andererseits: In den Zahlen f&uuml;r die Neu-Genesenen steckt vermutlich
+auch eine gro&szlig;e Unsicherheit: wer meldet sich schon gesund? Unter
+Umst&auml;nden sind diese Zahlen also nur gesch&auml;tzt, und jetzt kommt's:
+gesch&auml;tzt auf Grundlage der Regenerationszeit. Damit w&auml;re in
+beiden Rechenwegen (1) und (2) die gleiche Quelle der Unsicherheit. Fragt
+sich dann nur, warum die Zahlen so unterschiedlich sind.
+</dl>
+<hr>
+<font size="-1"><a href="mailto:derrobl2009@gmail.com">contact</a>
+</body>
+</html>
